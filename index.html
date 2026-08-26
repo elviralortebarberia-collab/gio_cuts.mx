@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gio Cuts MX - Agendar Cita</title>
+  <style>
+    :root {
+      --bg-color: #0d0d0d;
+      --card-bg: #171717;
+      --gold: #d4af37;
+      --gold-hover: #b89628;
+      --text: #ffffff;
+      --subtext: #aaaaaa;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid #222;
+    }
+
+    .logo-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid var(--gold);
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .title {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin: 0 0 8px 0;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--subtext);
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .tags {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--gold);
+      color: #000;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--gold-hover);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(212, 175, 55, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <img src="https://via.placeholder.com/110" alt="Gio Cuts Logo" class="logo-img">
+      
+      <h1 class="title">GIO_CUTS.MX 💈</h1>
+      <p class="subtitle">Transformando estilos · Barbería Profesional</p>
+      
+      <div class="tags">
+        <span class="tag">✂️ Cortes</span>
+        <span class="tag">🧔 Barba</span>
+        <span class="tag">👁️ Cejas</span>
+      </div>
+
+      <div class="btn-group">
+        <a href="https://wa.me/5212851049691?text=Hola,%20quiero%20agendar%20una%20cita" class="btn btn-primary" target="_blank">Agendar Cita</a>
+        <a href="https://instagram.com/gio_cuts.mx" class="btn btn-secondary" target="_blank">Ver Estilos</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
