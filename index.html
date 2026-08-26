@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>gio_barber.mx 💈</title>
+  <title>gio_cuts.mx 💈</title>
   <style>
     :root {
       --bg-dark: #0f0e0c;
@@ -146,6 +146,12 @@
       overflow: hidden;
     }
 
+    .profile-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .title {
       font-size: 24px;
       font-weight: 900;
@@ -226,15 +232,15 @@
       scroll-margin-top: 120px;
     }
 
-    /* Foto Sobre Mí */
+    /* Foto Sobre Mí exacta con bordes negros redondeados */
     .about-img-box {
       width: 100%;
-      height: 380px;
-      border-radius: 18px;
+      height: 440px;
+      border-radius: 24px;
       overflow: hidden;
       margin-bottom: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      background-color: #ddd;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      background-color: #000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -248,8 +254,8 @@
 
     .card-info {
       background: #ffffff;
-      border-radius: 15px;
-      padding: 18px;
+      border-radius: 18px;
+      padding: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
       font-size: 14px;
       line-height: 1.6;
@@ -265,14 +271,22 @@
     }
 
     .gallery-item {
-      background: #fff;
+      background: #111;
       border-radius: 12px;
-      height: 120px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      height: 160px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
     }
 
     /* Estilos IA Form */
@@ -485,7 +499,7 @@
   <!-- Encabezado -->
   <div class="nav-bar">
     <div class="nav-logo">💈</div>
-    <div class="nav-title">gio_barber.mx 💈</div>
+    <div class="nav-title">gio_cuts.mx 💈</div>
   </div>
 
   <!-- Menú de Navegación -->
@@ -501,9 +515,11 @@
 
     <!-- Inicio / Tarjeta Principal -->
     <div class="main-card" id="inicio">
-      <div class="profile-circle">💈</div>
+      <div class="profile-circle">
+        <img src="foto-gio.jpg" alt="Gio Barber" onerror="this.style.display='none'; this.parentElement.innerText='💈';">
+      </div>
       
-      <h1 class="title">GIO_BARBER.MX 💈</h1>
+      <h1 class="title">GIO_CUTS.MX 💈</h1>
       <p class="subtitle">Transformando estilos · Barbería Profesional</p>
       
       <div class="tags">
@@ -514,38 +530,46 @@
 
       <div class="btn-group">
         <a href="#agendar" class="btn btn-gold">AGENDAR CITA</a>
-        <a href="https://instagram.com/gio_barber.mx" class="btn btn-outline" target="_blank">VER ESTILOS</a>
+        <a href="https://instagram.com/gio_cuts.mx" class="btn btn-outline" target="_blank">VER ESTILOS</a>
       </div>
     </div>
 
-    <!-- Sección Sobre Mí -->
+    <!-- Sección Sobre Mí con tu foto y texto exacto -->
     <div class="section-box">
       <div class="section-tag">SOBRE MÍ</div>
       <h2 class="section-title">CONÓCEME</h2>
 
       <div class="about-img-box">
-        <img src="mi-foto.jpg" alt="Foto Barbero Gio" onerror="this.style.display='none'; this.parentElement.innerText='💈';">
+        <img src="foto-gio.jpg" alt="Gio Barber" onerror="this.style.display='none'; this.parentElement.innerText='💈';">
       </div>
 
       <div class="card-info">
-        Hola, soy Gio. Barbero enfocado en cortes modernos, degradados limpios, perfilado de barba y cejas. Me apasiona brindar la mejor calidad y atención personalizada para que te veas al 100%.
+        Hola, soy Gio, estudiante de barbería. Me apasiona aprender y mejorar cada día para ofrecer cortes modernos y de gran calidad. Actualmente todos mis cortes son de práctica enfocados en degradados y pulir técnica.
       </div>
     </div>
 
-    <!-- Sección Galería -->
+    <!-- Sección Galería de Imágenes Reales -->
     <div class="section-box" id="galeria">
       <div class="section-tag">TRABAJOS RECIENTES</div>
       <h2 class="section-title">GALERÍA</h2>
       
       <div class="gallery-grid">
-        <div class="gallery-item">✂️</div>
-        <div class="gallery-item">💈</div>
-        <div class="gallery-item">🧔</div>
-        <div class="gallery-item">✨</div>
+        <div class="gallery-item">
+          <img src="corte1.jpg" alt="Corte 1" onerror="this.parentElement.innerText='✂️';">
+        </div>
+        <div class="gallery-item">
+          <img src="corte2.jpg" alt="Corte 2" onerror="this.parentElement.innerText='💈';">
+        </div>
+        <div class="gallery-item">
+          <img src="corte3.jpg" alt="Corte 3" onerror="this.parentElement.innerText='🧔';">
+        </div>
+        <div class="gallery-item">
+          <img src="corte4.jpg" alt="Corte 4" onerror="this.parentElement.innerText='✨';">
+        </div>
       </div>
     </div>
 
-    <!-- 1. Sección Elige tu corte con IA -->
+    <!-- Sección Elige tu corte con IA -->
     <div class="section-box" id="servicios">
       <div class="section-tag">ASISTENTE</div>
       <h2 class="section-title">ELIGE TU CORTE CON IA</h2>
@@ -588,18 +612,17 @@
       </div>
     </div>
 
-    <!-- 2. Sección Agenda tu Corte (Pestañas Interactivas) -->
+    <!-- Sección Agenda tu Corte con tus datos -->
     <div class="section-box" id="agendar">
       <div class="section-tag">CITA</div>
       <h2 class="section-title">AGENDA TU CORTE</h2>
 
-      <!-- Pestañas de Cambio -->
       <div class="tab-buttons">
         <button type="button" class="tab-btn active" id="btnTabWa" onclick="mostrarPestana('wa')">RÁPIDO POR WHATSAPP</button>
         <button type="button" class="tab-btn" id="btnTabForm" onclick="mostrarPestana('form')">CON FORMULARIO</button>
       </div>
 
-      <!-- Pestaña 1: WhatsApp -->
+      <!-- Pestaña WhatsApp -->
       <div class="agenda-card" id="pestanaWa">
         <div class="agenda-icon">💈</div>
         <h3>AGENDA DIRECTO POR WHATSAPP</h3>
@@ -610,7 +633,7 @@
         </a>
       </div>
 
-      <!-- Pestaña 2: Formulario -->
+      <!-- Pestaña Formulario -->
       <div class="agenda-card" id="pestanaForm" style="display: none;">
         <h3>COMPLETA TUS DATOS 📝</h3>
         <p>Llena el formulario y te enviaremos la confirmación a WhatsApp.</p>
@@ -659,7 +682,7 @@
     </div>
   </a>
 
-  <!-- Lógica JavaScript de Selección, IA y Cambio de Pestañas -->
+  <!-- Script de Interacción -->
   <script>
     let selectedHair = '';
     let selectedFace = '';
@@ -707,6 +730,8 @@
         pestanaWa.style.display = 'none';
         pestanaForm.style.display = 'block';
         btnWa.classList.remove('active');
+        btnForm.classList.active;
+        btnWa.classList.remove('active');
         btnForm.classList.add('active');
       }
     }
@@ -725,3 +750,4 @@
 
 </body>
 </html>
+
