@@ -1,730 +1,233 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gio_cuts.mx 💈</title>
-  <style>
-    :root {
-      --bg-dark: #0f0e0c;
-      --card-bg: #181715;
-      --gold: #d4a037;
-      --gold-border: #c49228;
-      --text-dark: #111111;
-      --text-light: #ffffff;
-      --subtext: #aaaaaa;
-      --red-btn: #cc3333;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f7f3e9;
-      color: var(--text-dark);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      overflow-x: hidden;
-      padding-bottom: 90px;
-    }
-
-    /* Barra superior estilo Barber Pole */
-    .barber-stripe {
-      height: 10px;
-      width: 100%;
-      background: repeating-linear-gradient(
-        -45deg,
-        #003366,
-        #003366 15px,
-        #ffffff 15px,
-        #ffffff 30px,
-        #cc0000 30px,
-        #cc0000 45px,
-        #ffffff 45px,
-        #ffffff 60px
-      );
-    }
-
-    /* Encabezado */
-    .nav-bar {
-      display: flex;
-      align-items: center;
-      padding: 12px 16px;
-      background-color: #0d0d0d;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav-logo {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 1.5px solid var(--gold);
-      background-color: #222;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 12px;
-      font-size: 18px;
-    }
-
-    .nav-title {
-      font-size: 20px;
-      font-weight: 700;
-      font-style: italic;
-      color: var(--gold);
-      font-family: 'Georgia', serif;
-    }
-
-    /* Menú */
-    .menu-nav {
-      display: flex;
-      gap: 15px;
-      overflow-x: auto;
-      padding: 12px 16px;
-      background-color: #0d0d0d;
-      border-bottom: 1px solid #222;
-      scrollbar-width: none;
-      position: sticky;
-      top: 60px;
-      z-index: 99;
-    }
-    .menu-nav::-webkit-scrollbar {
-      display: none;
-    }
-
-    .menu-item {
-      color: #888;
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 800;
-      white-space: nowrap;
-      text-transform: uppercase;
-      padding-bottom: 4px;
-    }
-
-    .menu-item:hover, .menu-item.active {
-      color: var(--gold);
-      border-bottom: 2px solid #cc3333;
-    }
-
-    .container {
-      padding: 20px 16px;
-      max-width: 480px;
-      margin: 0 auto;
-    }
-
-    /* Tarjeta Perfil */
-    .main-card {
-      background: linear-gradient(180deg, #1c1a17 0%, #121110 100%);
-      border-radius: 20px;
-      padding: 25px 20px;
-      text-align: center;
-      border: 1px solid #2a2723;
-      margin-bottom: 25px;
-      color: var(--text-light);
-    }
-
-    .profile-circle {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      border: 3px solid var(--gold);
-      background-color: #252525;
-      margin: 0 auto 15px auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
-      overflow: hidden;
-    }
-
-    .title {
-      font-size: 24px;
-      font-weight: 900;
-      margin: 0 0 6px 0;
-      text-transform: uppercase;
-    }
-
-    .subtitle {
-      font-size: 13px;
-      color: var(--subtext);
-      margin: 0 0 18px 0;
-    }
-
-    .tags {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
-    .tag {
-      border: 1px solid var(--gold-border);
-      color: var(--gold);
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-    }
-
-    .btn-group {
-      display: flex;
-      gap: 10px;
-    }
-
-    .btn {
-      flex: 1;
-      padding: 12px;
-      border-radius: 10px;
-      font-weight: 800;
-      font-size: 12px;
-      text-decoration: none;
-      text-transform: uppercase;
-      text-align: center;
-    }
-
-    .btn-gold {
-      background-color: var(--gold);
-      color: #000;
-    }
-
-    .btn-outline {
-      border: 1px solid var(--gold-border);
-      color: var(--gold);
-      background: transparent;
-    }
-
-    /* Secciones generales */
-    .section-tag {
-      color: #cc4444;
-      font-size: 11px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 2px;
-    }
-
-    .section-title {
-      font-size: 24px;
-      font-weight: 900;
-      margin: 0 0 15px 0;
-      text-transform: uppercase;
-      color: #111;
-    }
-
-    .section-box {
-      margin-bottom: 30px;
-      scroll-margin-top: 120px;
-    }
-
-    /* Foto Sobre Mí */
-    .about-img-box {
-      width: 100%;
-      height: 380px;
-      border-radius: 18px;
-      overflow: hidden;
-      margin-bottom: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      background-color: #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .about-img-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .card-info {
-      background: #ffffff;
-      border-radius: 15px;
-      padding: 18px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      font-size: 14px;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 12px;
-    }
-
-    /* Galería */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-
-    .gallery-item {
-      background: #fff;
-      border-radius: 12px;
-      height: 120px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    /* Estilos IA Form */
-    .ai-card {
-      background-color: #141311;
-      border-radius: 18px;
-      padding: 20px;
-      border: 1px solid #2a2723;
-      color: #fff;
-    }
-
-    .ai-title {
-      color: #d4a037;
-      font-size: 18px;
-      margin: 0 0 6px 0;
-      font-weight: 800;
-    }
-
-    .ai-subtitle {
-      color: #aaa;
-      font-size: 13px;
-      margin-bottom: 20px;
-      line-height: 1.4;
-    }
-
-    .form-label {
-      display: block;
-      font-size: 11px;
-      font-weight: 800;
-      color: #d4a037;
-      margin-top: 15px;
-      margin-bottom: 8px;
-      letter-spacing: 0.5px;
-    }
-
-    .form-input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #333;
-      background-color: #222;
-      color: #fff;
-      font-size: 14px;
-    }
-
-    .chip-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .chip {
-      background-color: #222;
-      border: 1px solid #444;
-      color: #ccc;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 12px;
-      cursor: pointer;
-    }
-
-    .chip.selected {
-      background-color: #d4a037;
-      color: #000;
-      border-color: #d4a037;
-      font-weight: bold;
-    }
-
-    .btn-sugerir {
-      width: 100%;
-      margin-top: 25px;
-      padding: 14px;
-      background-color: #d4a037;
-      color: #000;
-      border: none;
-      border-radius: 10px;
-      font-weight: 900;
-      font-size: 13px;
-      cursor: pointer;
-      text-transform: uppercase;
-    }
-
-    .resultado-box {
-      margin-top: 20px;
-      padding: 15px;
-      background-color: #1f1d19;
-      border: 1px solid #d4a037;
-      border-radius: 10px;
-    }
-
-    /* Estilos Sección Agendar con Pestañas */
-    .tab-buttons {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 15px;
-    }
-
-    .tab-btn {
-      flex: 1;
-      padding: 12px;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      background: #fff;
-      color: #555;
-      font-weight: 800;
-      font-size: 11px;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .tab-btn.active {
-      background-color: #111;
-      color: var(--gold);
-      border-color: #111;
-    }
-
-    .agenda-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 25px 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-
-    .agenda-icon {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .agenda-card h3 {
-      font-size: 18px;
-      font-weight: 900;
-      margin: 0 0 10px 0;
-      text-transform: uppercase;
-    }
-
-    .agenda-card p {
-      font-size: 13px;
-      color: #666;
-      margin: 0 0 20px 0;
-      line-height: 1.4;
-    }
-
-    .btn-wa-red {
-      display: inline-block;
-      width: 100%;
-      padding: 14px;
-      background-color: var(--red-btn);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: 900;
-      font-size: 12px;
-      text-transform: uppercase;
-    }
-
-    .form-agenda label {
-      display: block;
-      text-align: left;
-      font-size: 11px;
-      font-weight: 800;
-      color: #333;
-      margin: 10px 0 4px 0;
-    }
-
-    .form-agenda input, .form-agenda select {
-      width: 100%;
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      margin-bottom: 10px;
-      font-size: 13px;
-    }
-
-    /* Botón Flotante */
-    .floating-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 15px;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(90deg, #cc0000 0%, #ffffff 50%, #003366 100%);
-      padding: 3px;
-      border-radius: 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-      text-decoration: none;
-    }
-
-    .floating-btn-inner {
-      background-color: #ffffff;
-      color: #000;
-      padding: 10px 18px;
-      border-radius: 25px;
-      font-weight: 900;
-      font-size: 12px;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gio_barber.mx - Cortes & Agenda</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
 </head>
-<body>
+<body class="bg-zinc-950 text-white min-h-screen py-10 px-4">
 
-  <!-- Barra Superior Barber Pole -->
-  <div class="barber-stripe"></div>
+    <div class="max-w-4xl mx-auto space-y-16">
 
-  <!-- Encabezado -->
-  <div class="nav-bar">
-    <div class="nav-logo">💈</div>
-    <div class="nav-title">Gio_cuts.mx 💈</div>
-  </div>
+        <!-- Header -->
+        <header class="text-center space-y-2">
+            <h1 class="text-4xl font-extrabold tracking-wider text-amber-500">gio_barber.mx</h1>
+            <p class="text-zinc-400 text-sm">Estilo, precisión y tecnología a tu servicio</p>
+        </header>
 
-  <!-- Menú de Navegación -->
-  <div class="menu-nav">
-    <a href="#inicio" class="menu-item active">INICIO</a>
-    <a href="#galeria" class="menu-item">GALERÍA</a>
-    <a href="#servicios" class="menu-item">ELIGE TU CORTE</a>
-    <a href="#agendar" class="menu-item">AGENDAR</a>
-    <a href="#opiniones" class="menu-item">OPINIONES</a>
-  </div>
+        <!-- SECCIÓN 1: ELIGE TU CORTE CON IA -->
+        <section class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 md:p-8 shadow-xl">
+            <div class="flex items-center gap-3 mb-6">
+                <i class="fa-solid fa-wand-magic-sparkles text-amber-500 text-2xl"></i>
+                <h2 class="text-2xl font-bold tracking-wide uppercase">Elige tu corte con IA</h2>
+            </div>
 
-  <div class="container">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Formulario Selector -->
+                <form id="ia-form" class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-zinc-400 mb-1">Edad</label>
+                        <select id="ia-edad" class="w-full bg-zinc-800 border border-zinc-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                            <option value="joven">15 - 24 años</option>
+                            <option value="adulto_joven">25 - 34 años</option>
+                            <option value="adulto">35 - 50 años</option>
+                            <option value="senior">50+ años</option>
+                        </select>
+                    </div>
 
-    <!-- Inicio / Tarjeta Principal -->
-    <div class="main-card" id="inicio">
-      <div class="profile-circle">💈</div>
-      
-      <h1 class="title">GIO_CUTS.MX 💈</h1>
-      <p class="subtitle">Transformando estilos · Barbería Profesional</p>
-      
-      <div class="tags">
-        <span class="tag">✂️ CORTES</span>
-        <span class="tag">🧔 BARBA</span>
-        <span class="tag">👁️ CEJAS</span>
-      </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-zinc-400 mb-1">Tipo de Cabello</label>
+                        <select id="ia-cabello" class="w-full bg-zinc-800 border border-zinc-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                            <option value="lacio">Lacio</option>
+                            <option value="ondulado">Ondulado</option>
+                            <option value="rizado">Rizado / Afrikano</option>
+                        </select>
+                    </div>
 
-      <div class="btn-group">
-        <a href="#agendar" class="btn btn-gold">AGENDAR CITA</a>
-        <a href="https://instagram.com/gio_cuts.mx" class="btn btn-outline" target="_blank">VER ESTILOS</a>
-      </div>
-    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-zinc-400 mb-1">Forma de Cara</label>
+                        <select id="ia-cara" class="w-full bg-zinc-800 border border-zinc-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                            <option value="ovalada">Ovalada</option>
+                            <option value="cuadrada">Cuadrada</option>
+                            <option value="redonda">Redonda</option>
+                            <option value="diamante">Diamante / Alargada</option>
+                        </select>
+                    </div>
 
-    <!-- Sección Sobre Mí -->
-    <div class="section-box">
-      <div class="section-tag">SOBRE MÍ</div>
-      <h2 class="section-title">CONÓCEME</h2>
+                    <button type="button" onclick="generarRecomendacionIA()" class="w-full bg-amber-500 hover:bg-amber-600 text-zinc-950 font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2 mt-2">
+                        <i class="fa-solid fa-bolt"></i> Obtener Recomendación Instantánea
+                    </button>
+                </form>
 
-      <div class="about-img-box">
-        <img src="mi-foto.jpg" alt="Foto Barbero Gio" onerror="this.style.display='none'; this.parentElement.innerText='💈';">
-      </div>
+                <!-- Tarjeta Resultado IA -->
+                <div class="bg-zinc-950 border border-zinc-800 rounded-xl p-4 flex flex-col items-center text-center justify-center relative overflow-hidden">
+                    <span class="absolute top-3 right-3 bg-amber-500/10 text-amber-500 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/20">
+                        RECOMENDACIÓN IA
+                    </span>
 
-      <div class="card-info">
-        Hola, soy Gio. Barbero enfocado en cortes modernos, degradados limpios, perfilado de barba y cejas. Me apasiona brindar la mejor calidad y atención personalizada para que te veas al 100%.
-      </div>
-    </div>
+                    <img id="ia-img" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80" alt="Corte recomendado" class="w-48 h-48 object-cover rounded-lg mb-4 border border-zinc-800">
+                    
+                    <h3 id="ia-nombre-corte" class="text-xl font-bold text-amber-500 mb-1">Fade Texturizado + Barba</h3>
+                    <p id="ia-desc-corte" class="text-xs text-zinc-400 px-4">Ideal para balancear tus facciones y aportar volumen superior manteniendo laterales limpios.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Sección Galería -->
-    <div class="section-box" id="galeria">
-      <div class="section-tag">TRABAJOS RECIENTES</div>
-      <h2 class="section-title">GALERÍA</h2>
-      
-      <div class="gallery-grid">
-        <div class="gallery-item">✂️</div>
-        <div class="gallery-item">💈</div>
-        <div class="gallery-item">🧔</div>
-        <div class="gallery-item">✨</div>
-      </div>
-    </div>
+        <!-- SECCIÓN 2: AGENDA TU CORTE -->
+        <section class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 md:p-8 shadow-xl">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold uppercase tracking-wide">Agenda tu Corte</h2>
+                <p class="text-xs text-zinc-400 mt-1">Selecciona tu método de reserva preferido</p>
+            </div>
 
-    <!-- Sección Elige tu corte / IA -->
-    <div class="section-box" id="servicios">
-      <div class="section-tag">ASISTENTE</div>
-      <h2 class="section-title">ELIGE TU CORTE CON IA</h2>
+            <!-- Navegación por Pestañas (Tabs) -->
+            <div class="flex border-b border-zinc-800 mb-6">
+                <button id="tab-ws-btn" onclick="switchTab('whatsapp')" class="flex-1 py-3 text-sm font-bold border-b-2 border-amber-500 text-amber-500 flex items-center justify-center gap-2 transition-all">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> RÁPIDO POR WHATSAPP
+                </button>
+                <button id="tab-form-btn" onclick="switchTab('formulario')" class="flex-1 py-3 text-sm font-bold border-b-2 border-transparent text-zinc-500 hover:text-zinc-300 flex items-center justify-center gap-2 transition-all">
+                    <i class="fa-regular fa-calendar-check text-lg"></i> CON FORMULARIO
+                </button>
+            </div>
 
-      <div class="ai-card">
-        <h3 class="ai-title">CUÉNTAME DE TI 🤖</h3>
-        <p class="ai-subtitle">Responde estos datos y súbeme una foto de referencia. Te sugeriré el corte que mejor te queda antes de tu cita.</p>
+            <!-- Contenido Pestaña 1: WhatsApp -->
+            <div id="tab-whatsapp" class="block text-center py-6 space-y-6">
+                <div class="max-w-md mx-auto space-y-3">
+                    <div class="w-16 h-16 bg-green-500/10 text-green-500 rounded-full flex items-center justify-center mx-auto text-3xl border border-green-500/20">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="text-lg font-bold">Reserva Directa por Mensaje</h3>
+                    <p class="text-xs text-zinc-400">Te atenderemos de inmediato para coordinar el horario que mejor te acomode.</p>
+                </div>
 
-        <form onsubmit="generarSugerencia(event)">
-          <label class="form-label">EDAD</label>
-          <input type="number" id="edad" class="form-input" placeholder="Ej. 17" required>
+                <a href="https://wa.me/522851049691?text=Hola%20gio_barber.mx,%20me%20gustar%C3%ADa%20agendar%20una%20cita%20para%20un%20corte." target="_blank" class="inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-500 text-white font-bold py-4 px-8 rounded-xl text-sm transition-all shadow-lg shadow-green-900/20">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> ENVIAR WHATSAPP (+52 285 104 9691)
+                </a>
+            </div>
 
-          <label class="form-label">TIPO DE CABELLO</label>
-          <div class="chip-group">
-            <button type="button" class="chip" onclick="selectChip(this, 'hairType')">Liso</button>
-            <button type="button" class="chip" onclick="selectChip(this, 'hairType')">Ondulado</button>
-            <button type="button" class="chip" onclick="selectChip(this, 'hairType')">Rizado</button>
-            <button type="button" class="chip" onclick="selectChip(this, 'hairType')">Crespo</button>
-          </div>
+            <!-- Contenido Pestaña 2: Formulario -->
+            <div id="tab-formulario" class="hidden space-y-4">
+                <form id="booking-form" onsubmit="enviarFormularioWhatsApp(event)" class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-zinc-400 mb-1">Nombre Completo</label>
+                        <input type="text" id="form-nombre" required placeholder="Tu nombre" class="w-full bg-zinc-800 border border-zinc-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                    </div>
 
-          <label class="form-label">FORMA DE TU CARA</label>
-          <div class="chip-group">
-            <button type="button" class="chip" onclick="selectChip(this, 'faceShape')">Ovalada</button>
-            <button type="button" class="chip" onclick="selectChip(this, 'faceShape')">Redonda</button>
-            <button type="button" class="chip" onclick="selectChip(this, 'faceShape')">Cuadrada</button>
-            <button type="button" class="chip" onclick="selectChip(this, 'faceShape')">Alargada</button>
-            <button type="button" class="chip" onclick="selectChip(this, 'faceShape')">Corazón</button>
-          </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-zinc-400 mb-1">Servicio</label>
+                        <select id="form-servicio" class="w-full bg-zinc-800 border border-zinc-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                            <option value="Corte de Cabello">Corte de Cabello</option>
+                            <option value="Barba & Perfilado">Barba & Perfilado</option>
+                            <option value="Combo (Corte + Barba)">Combo (Corte + Barba)</option>
+                            <option value="Corte Recomendado por IA">Corte Recomendado por IA</option>
+                        </select>
+                    </div>
 
-          <label class="form-label">TU FOTO</label>
-          <input type="file" accept="image/*" class="form-input">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-zinc-400 mb-1">Fecha Preferida</label>
+                        <input type="date" id="form-fecha" required class="w-full bg-zinc-800 border border-zinc-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                    </div>
 
-          <button type="submit" class="btn-sugerir">✨ SUGERIR MI CORTE</button>
-        </form>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-zinc-400 mb-1">Hora Preferida</label>
+                        <input type="time" id="form-hora" required class="w-full bg-zinc-800 border border-zinc-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                    </div>
 
-        <div id="resultadoIA" class="resultado-box" style="display: none;">
-          <h4 style="color: #d4a037; margin: 0 0 6px 0;">💡 Tu corte ideal:</h4>
-          <p id="textoResultado" style="margin: 0; font-size: 13px; color: #ddd;"></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Sección Agenda tu Corte (WhatsApp / Formulario) -->
-    <div class="section-box" id="agendar">
-      <div class="section-tag">CITA</div>
-      <h2 class="section-title">AGENDA TU CORTE</h2>
-
-      <!-- Pestañas de Cambio -->
-      <div class="tab-buttons">
-        <button type="button" class="tab-btn active" id="btnTabWa" onclick="mostrarPestana('wa')">RÁPIDO POR WHATSAPP</button>
-        <button type="button" class="tab-btn" id="btnTabForm" onclick="mostrarPestana('form')">CON FORMULARIO</button>
-      </div>
-
-      <!-- Pestaña 1: WhatsApp -->
-      <div class="agenda-card" id="pestanaWa">
-        <div class="agenda-icon">💈</div>
-        <h3>AGENDA DIRECTO POR WHATSAPP</h3>
-        <p>Presiona el botón y te abriremos un chat con un mensaje ya listo para Gio.</p>
-
-        <a href="https://wa.me/522851049691?text=Hola%20Gio,%20quiero%20agendar%20una%20cita%20de%20barber%C3%ADa" class="btn-wa-red" target="_blank">
-          📱 AGENDAR CITA POR WHATSAPP
-        </a>
-      </div>
-
-      <!-- Pestaña 2: Formulario -->
-      <div class="agenda-card" id="pestanaForm" style="display: none;">
-        <h3>COMPLETA TUS DATOS 📝</h3>
-        <p>Llena el formulario y te enviaremos la confirmación a WhatsApp.</p>
-
-        <form class="form-agenda" onsubmit="enviarFormularioWa(event)">
-          <label>NOMBRE COMPLETO</label>
-          <input type="text" id="formNombre" placeholder="Ej. Juan Pérez" required>
-
-          <label>SERVICIO</label>
-          <select id="formServicio" required>
-            <option value="Corte de cabello">Corte de cabello</option>
-            <option value="Perfilado de barba">Perfilado de barba</option>
-            <option value="Corte + Barba">Corte + Barba</option>
-            <option value="Diseño de cejas">Diseño de cejas</option>
-          </select>
-
-          <label>FECHA / HORA DESEADA</label>
-          <input type="text" id="formFecha" placeholder="Ej. Mañana a las 5:00 PM" required>
-
-          <button type="submit" class="btn-wa-red" style="border: none; cursor: pointer; margin-top: 10px;">
-            📲 ENVIAR DATOS A WHATSAPP
-          </button>
-        </form>
-      </div>
+                    <div class="md:col-span-2 mt-2">
+                        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-zinc-950 font-bold py-3.5 rounded-lg transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wider">
+                            <i class="fa-solid fa-paper-plane"></i> Confirmar Cita por WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
     </div>
 
-    <!-- Sección Opiniones -->
-    <div class="section-box" id="opiniones">
-      <div class="section-tag">LO QUE DICEN</div>
-      <h2 class="section-title">OPINIONES</h2>
+    <!-- Script de Funcionalidades -->
+    <script>
+        // Lógica de Pestañas
+        function switchTab(tab) {
+            const tabWs = document.getElementById('tab-whatsapp');
+            const tabForm = document.getElementById('tab-formulario');
+            const btnWs = document.getElementById('tab-ws-btn');
+            const btnForm = document.getElementById('tab-form-btn');
 
-      <div class="card-info">
-        <div style="color: #d4a037; font-size: 12px; margin-bottom: 4px;">★★★★★</div>
-        "Excelente atención por parte de Gio y cortes muy bien definidos. 100% recomendado."
-        <div style="font-size: 11px; color: #888; font-weight: 700; margin-top: 6px;">- CLIENTE FRECUENTE</div>
-      </div>
-    </div>
+            if (tab === 'whatsapp') {
+                tabWs.classList.remove('hidden');
+                tabWs.classList.add('block');
+                tabForm.classList.add('hidden');
 
-  </div>
+                btnWs.className = "flex-1 py-3 text-sm font-bold border-b-2 border-amber-500 text-amber-500 flex items-center justify-center gap-2 transition-all";
+                btnForm.className = "flex-1 py-3 text-sm font-bold border-b-2 border-transparent text-zinc-500 hover:text-zinc-300 flex items-center justify-center gap-2 transition-all";
+            } else {
+                tabForm.classList.remove('hidden');
+                tabForm.classList.add('block');
+                tabWs.classList.add('hidden');
 
-  <!-- Botón Flotante Agendar Cita -->
-  <a href="https://wa.me/522851049691?text=Hola%20Gio,%20quiero%20agendar%20una%20cita" class="floating-btn" target="_blank">
-    <div class="floating-btn-inner">
-      💈 AGENDAR CITA
-    </div>
-  </a>
+                btnForm.className = "flex-1 py-3 text-sm font-bold border-b-2 border-amber-500 text-amber-500 flex items-center justify-center gap-2 transition-all";
+                btnWs.className = "flex-1 py-3 text-sm font-bold border-b-2 border-transparent text-zinc-500 hover:text-zinc-300 flex items-center justify-center gap-2 transition-all";
+            }
+        }
 
-  <!-- Código JavaScript -->
-  <script>
-    let selectedHair = '';
-    let selectedFace = '';
+        // Lógica Recomendación IA
+        const opcionesIA = [
+            {
+                corte: "Mid Fade + Crop Top",
+                desc: "Ideal para resaltar la textura superior y definir la estructura facial.",
+                img: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                corte: "Classic Slick Back",
+                desc: "Estilo elegante y pulido que estiliza caras redondas u ovaladas.",
+                img: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                corte: "Low Fade Rizado + Líneas",
+                desc: "Excelente definición para rizos, manteniendo bordes bien definidos.",
+                img: "https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                corte: "Taper Fade + Barba Larga",
+                desc: "Equilibra perfectamente las caras cuadradas dando un aspecto moderno.",
+                img: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=500&q=80"
+            }
+        ];
 
-    function selectChip(element, group) {
-      const parent = element.parentElement;
-      parent.querySelectorAll('.chip').forEach(btn => btn.classList.remove('selected'));
-      element.classList.add('selected');
+        function generarRecomendacionIA() {
+            const random = Math.floor(Math.random() * opcionesIA.length);
+            const seleccion = opcionesIA[random];
 
-      if (group === 'hairType') selectedHair = element.innerText;
-      if (group === 'faceShape') selectedFace = element.innerText;
-    }
+            document.getElementById('ia-nombre-corte').textContent = seleccion.corte;
+            document.getElementById('ia-desc-corte').textContent = seleccion.desc;
+            document.getElementById('ia-img').src = seleccion.img;
+        }
 
-    function generarSugerencia(e) {
-      e.preventDefault();
-      const resultadoDiv = document.getElementById('resultadoIA');
-      const textoResultado = document.getElementById('textoResultado');
+        // Enviar Formulario hacia WhatsApp
+        function enviarFormularioWhatsApp(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('form-nombre').value;
+            const servicio = document.getElementById('form-servicio').value;
+            const fecha = document.getElementById('form-fecha').value;
+            const hora = document.getElementById('form-hora').value;
 
-      let sugerencia = "Te recomendamos un Mid Fade o Low Fade estructurado para resaltar tus facciones.";
-
-      if (selectedFace === 'Redonda') {
-        sugerencia = "Para rostro redondo te recomendamos un High Fade con volumen arriba o Quiff moderno para estilizar el rostro.";
-      } else if (selectedFace === 'Cuadrada') {
-        sugerencia = "Para rostro cuadrado recomendamos un Crop Fade o Buzz Cut para destacar tu mandíbula.";
-      } else if (selectedFace === 'Alargada') {
-        sugerencia = "Para rostro alargado te sugerimos un Taper Fade bajo sin excesivo volumen en la coronilla.";
-      }
-
-      textoResultado.innerText = sugerencia;
-      resultadoDiv.style.display = 'block';
-    }
-
-    function mostrarPestana(tipo) {
-      const pestanaWa = document.getElementById('pestanaWa');
-      const pestanaForm = document.getElementById('pestanaForm');
-      const btnWa = document.getElementById('btnTabWa');
-      const btnForm = document.getElementById('btnTabForm');
-
-      if (tipo === 'wa') {
-        pestanaWa.style.display = 'block';
-        pestanaForm.style.display = 'none';
-        btnWa.classList.add('active');
-        btnForm.classList.remove('active');
-      } else {
-        pestanaWa.style.display = 'none';
-        pestanaForm.style.display = 'block';
-        btnWa.classList.remove('active');
-        btnForm.classList.add('active');
-      }
-    }
-
-    function enviarFormularioWa(e) {
-      e.preventDefault();
-      const nombre = document.getElementById('formNombre').value;
-      const servicio = document.getElementById('formServicio').value;
-      const fecha = document.getElementById('formFecha').value;
-
-      const mensaje = `Hola%20Gio,%20me%20gustaría%20agendar%20una%20cita.%0A%0A*Nombre:*%20${encodeURIComponent(nombre)}%0A*Servicio:*%20${encodeURIComponent(servicio)}%0A*Fecha/Hora:*%20${encodeURIComponent(fecha)}`;
-      
-      window.open(`https://wa.me/522851049691?text=${mensaje}`, '_blank');
-    }
-  </script>
-
+            const mensaje = `Hola *gio_barber.mx*, quiero agendar una cita:%0A%0A- *Nombre:* ${nombre}%0A- *Servicio:* ${servicio}%0A- *Fecha:* ${fecha}%0A- *Hora:* ${hora}`;
+            
+            window.open(`https://wa.me/522851049691?text=${mensaje}`, '_blank');
+        }
+    </script>
 </body>
 </html>
+
+
 
 
 
