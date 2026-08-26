@@ -1,428 +1,705 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Giovanni Barbero</title>
+  <title>Giovanni Barber</title>
 
   <style>
+
     * {
+
       box-sizing: border-box;
+
       margin: 0;
+
       padding: 0;
+
     }
 
     html {
+
       scroll-behavior: smooth;
+
     }
 
     body {
+
       font-family: Arial, Helvetica, sans-serif;
+
       background: #0b0708;
+
       color: #f5f5f5;
+
     }
 
     /* =========================
-       ENCABEZADO
+
+       PORTADA
+
     ========================= */
 
     header {
+
       background: #0b0708;
+
       border-bottom: 1px solid #302326;
-      padding: 28px 20px 22px;
+
+      padding: 28px 20px 25px;
+
       text-align: center;
+
     }
 
     .logo {
+
       display: inline-flex;
+
       align-items: center;
+
+      justify-content: center;
+
       gap: 18px;
+
     }
 
     .logo-circle {
+
       width: 92px;
+
       height: 92px;
+
       border: 5px solid #e6b83f;
+
       border-radius: 50%;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
       color: #e6b83f;
+
       font-family: Georgia, serif;
+
       font-size: 35px;
+
       font-weight: bold;
+
       box-shadow: 0 0 18px rgba(230, 184, 63, 0.15);
+
     }
 
     .logo-text {
+
       text-align: left;
+
       color: #e6b83f;
+
       font-family: Georgia, serif;
+
       font-style: italic;
+
     }
 
     .logo-text h1 {
+
       font-size: 42px;
+
       line-height: 0.95;
+
     }
 
     .logo-text h2 {
+
       font-size: 40px;
-      margin-top: 5px;
+
+      margin-top: 7px;
+
     }
 
     .barber-icon {
+
       font-size: 30px;
-      margin-left: 12px;
+
+      margin-left: 8px;
+
     }
 
     /* =========================
+
        MENÚ
+
     ========================= */
 
     nav {
+
       position: sticky;
+
       top: 0;
+
       z-index: 100;
+
       background: #0b0708;
+
       border-bottom: 1px solid #302326;
+
       overflow-x: auto;
+
     }
 
     nav ul {
+
       list-style: none;
+
       display: flex;
+
       justify-content: center;
+
       min-width: max-content;
+
     }
 
     nav a {
+
       display: block;
-      padding: 22px 28px;
+
+      padding: 21px 27px;
+
       color: #d5d1d2;
+
       text-decoration: none;
-      font-size: 18px;
+
+      font-size: 17px;
+
       font-weight: bold;
+
       transition: 0.3s;
+
     }
 
     nav a:hover {
+
       color: #e6b83f;
+
     }
 
     /* =========================
+
        SECCIONES
+
     ========================= */
 
     section {
+
       padding: 80px 20px;
+
       max-width: 1100px;
+
       margin: auto;
+
     }
 
     .hero {
+
       min-height: 600px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
       text-align: center;
+
     }
 
     .hero-content {
+
       max-width: 800px;
+
     }
 
     .hero h2 {
+
       color: #e6b83f;
+
       font-family: Georgia, serif;
-      font-size: clamp(45px, 8vw, 80px);
-      margin-bottom: 20px;
+
+      font-size: clamp(48px, 8vw, 82px);
+
+      line-height: 1;
+
+      margin-bottom: 25px;
+
     }
 
     .hero p {
-      color: #c9c5c6;
-      font-size: 22px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
 
-    .gold {
-      color: #e6b83f;
+      color: #c9c5c6;
+
+      font-size: 21px;
+
+      line-height: 1.6;
+
+      margin-bottom: 32px;
+
     }
 
     .button {
+
       display: inline-block;
+
       background: #e6b83f;
+
       color: #0b0708;
+
       border: none;
+
       padding: 16px 28px;
+
       border-radius: 8px;
+
       font-size: 17px;
+
       font-weight: bold;
+
       text-decoration: none;
+
       cursor: pointer;
+
       transition: 0.3s;
+
     }
 
     .button:hover {
+
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(230, 184, 63, 0.18);
+
+      box-shadow: 0 8px 25px rgba(230, 184, 63, 0.2);
+
     }
 
     .section-title {
+
       text-align: center;
+
       color: #e6b83f;
+
       font-family: Georgia, serif;
+
       font-size: clamp(40px, 7vw, 62px);
+
       margin-bottom: 12px;
+
     }
 
     .section-subtitle {
+
       text-align: center;
+
       color: #bdb7b9;
+
       font-size: 20px;
+
       margin-bottom: 45px;
+
     }
 
     /* =========================
+
        ELIGE TU CORTE CON IA
+
     ========================= */
 
     .ai-box {
+
       background: #130e10;
+
       border: 1px solid #3b2b2f;
+
       border-radius: 20px;
+
       padding: 35px;
+
       max-width: 850px;
+
       margin: auto;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+
     }
 
     .form-group {
+
       margin-bottom: 24px;
+
     }
 
     label {
+
       display: block;
+
       color: #e6b83f;
+
       font-weight: bold;
+
       font-size: 17px;
+
       margin-bottom: 9px;
+
     }
 
     select,
+
     input,
+
     textarea {
+
       width: 100%;
+
       padding: 15px;
+
       background: #0b0708;
+
       color: white;
+
       border: 1px solid #4a373b;
+
       border-radius: 8px;
+
       font-size: 16px;
+
       outline: none;
+
     }
 
     select:focus,
-    input:focus,
-    textarea:focus {
-      border-color: #e6b83f;
-    }
 
-    textarea {
-      min-height: 120px;
-      resize: vertical;
+    input:focus,
+
+    textarea:focus {
+
+      border-color: #e6b83f;
+
     }
 
     .ai-result {
+
       display: none;
+
       margin-top: 28px;
+
       padding: 25px;
+
       border-left: 4px solid #e6b83f;
+
       background: #0b0708;
+
       border-radius: 8px;
+
     }
 
     .ai-result h3 {
+
       color: #e6b83f;
+
       margin-bottom: 12px;
+
       font-size: 24px;
+
     }
 
     .ai-result p {
+
       color: #d2ced0;
+
       line-height: 1.6;
+
       font-size: 17px;
+
     }
 
     /* =========================
+
        AGENDA
+
     ========================= */
 
     .appointment-box {
+
       background: #130e10;
+
       border: 1px solid #3b2b2f;
+
       border-radius: 20px;
+
       padding: 35px;
+
       max-width: 700px;
+
       margin: auto;
+
     }
 
-    .success-message {
-      display: none;
-      margin-top: 20px;
-      padding: 18px;
-      background: #151d15;
-      border: 1px solid #496249;
-      border-radius: 8px;
-      color: #bfe3bf;
-      line-height: 1.5;
+    .whatsapp-info {
+
+      text-align: center;
+
+      color: #bdb7b9;
+
+      margin-bottom: 25px;
+
+      line-height: 1.6;
+
+    }
+
+    .whatsapp-number {
+
+      color: #e6b83f;
+
+      font-weight: bold;
+
     }
 
     /* =========================
+
        OPINIONES
+
     ========================= */
 
     .reviews {
+
       display: grid;
+
       grid-template-columns: repeat(2, 1fr);
+
       gap: 25px;
+
       max-width: 950px;
+
       margin: auto;
+
     }
 
     .review {
+
       background: #130e10;
+
       border: 1px solid #3b2b2f;
+
       border-radius: 18px;
+
       padding: 30px;
+
     }
 
     .stars {
+
       color: #e6b83f;
+
       font-size: 30px;
+
       letter-spacing: 3px;
+
       margin-bottom: 20px;
+
     }
 
     .review p {
+
       color: #d0cccd;
+
       font-size: 18px;
+
       line-height: 1.7;
+
       margin-bottom: 20px;
+
     }
 
     .review strong {
+
       color: white;
+
       font-size: 18px;
+
     }
 
     /* =========================
+
        CONÓCEME
+
     ========================= */
 
     .about {
+
       max-width: 800px;
+
       margin: auto;
+
       text-align: center;
+
       background: #130e10;
+
       border: 1px solid #3b2b2f;
+
       border-radius: 20px;
+
       padding: 40px;
+
     }
 
     .about h3 {
+
       color: #e6b83f;
+
       font-family: Georgia, serif;
+
       font-size: 36px;
+
       margin-bottom: 20px;
+
     }
 
     .about p {
+
       color: #ccc7c9;
+
       font-size: 19px;
+
       line-height: 1.8;
+
     }
 
     /* =========================
+
        FOOTER
+
     ========================= */
 
     footer {
+
       text-align: center;
+
       padding: 45px 20px;
+
       border-top: 1px solid #302326;
+
       color: #aaa4a6;
+
     }
 
     footer strong {
+
       color: #e6b83f;
+
     }
 
     /* =========================
+
        MÓVIL
+
     ========================= */
 
     @media (max-width: 700px) {
 
       .logo {
-        gap: 12px;
+
+        gap: 11px;
+
       }
 
       .logo-circle {
+
         width: 75px;
+
         height: 75px;
+
         font-size: 28px;
+
         border-width: 4px;
+
       }
 
       .logo-text h1 {
+
         font-size: 32px;
+
       }
 
       .logo-text h2 {
+
         font-size: 30px;
+
       }
 
       .barber-icon {
+
         font-size: 23px;
+
       }
 
       nav ul {
+
         justify-content: flex-start;
+
       }
 
       nav a {
+
         padding: 18px 20px;
+
         font-size: 15px;
+
       }
 
       section {
+
         padding: 65px 16px;
+
       }
 
       .ai-box,
+
       .appointment-box,
+
       .about {
+
         padding: 25px 20px;
+
       }
 
       .reviews {
+
         grid-template-columns: 1fr;
+
       }
 
       .hero {
+
         min-height: 500px;
+
       }
+
     }
+
   </style>
+
 </head>
 
 <body>
 
   <!-- =========================
-       ENCABEZADO
+
+       PORTADA
+
   ========================= -->
 
   <header>
@@ -430,54 +707,77 @@
     <div class="logo">
 
       <div class="logo-circle">
+
         GB
+
       </div>
 
       <div class="logo-text">
+
         <h1>Giovanni</h1>
-        <h2>Barbero</h2>
+
+        <h2>Barber</h2>
+
       </div>
 
-      <div class="barber-icon">💈</div>
+      <div class="barber-icon">
+
+        💈
+
+      </div>
 
     </div>
 
   </header>
 
-
   <!-- =========================
+
        MENÚ
+
   ========================= -->
 
   <nav>
+
     <ul>
 
       <li>
+
         <a href="#inicio">INICIO</a>
+
       </li>
 
       <li>
+
         <a href="#corte">ELIGE TU CORTE</a>
+
       </li>
 
       <li>
+
         <a href="#agenda">AGENDA</a>
+
       </li>
 
       <li>
+
         <a href="#opiniones">OPINIONES</a>
+
       </li>
 
       <li>
+
         <a href="#conoceme">CONÓCEME</a>
+
       </li>
 
     </ul>
+
   </nav>
 
-
   <!-- =========================
+
        INICIO
+
   ========================= -->
 
   <section id="inicio" class="hero">
@@ -485,186 +785,253 @@
     <div class="hero-content">
 
       <h2>
+
         GIOVANNI<br>
-        BARBERO
+
+        BARBER
+
       </h2>
 
       <p>
+
         Estilo, precisión y atención personalizada.
+
         Encuentra el corte que mejor va contigo.
+
       </p>
 
       <a href="#corte" class="button">
+
         ELIGE TU CORTE
+
       </a>
 
     </div>
 
   </section>
 
-
   <!-- =========================
-       ELIGE TU CORTE
+
+       ELIGE TU CORTE CON IA
+
   ========================= -->
 
   <section id="corte">
 
     <h2 class="section-title">
+
       ELIGE TU CORTE CON IA
+
     </h2>
 
     <p class="section-subtitle">
-      Responde unas preguntas y recibe una recomendación.
-    </p>
 
+      Responde unas preguntas y recibe una recomendación.
+
+    </p>
 
     <div class="ai-box">
 
       <div class="form-group">
 
         <label for="edad">
+
           ¿Qué edad tienes?
+
         </label>
 
         <select id="edad">
 
           <option value="">
+
             Selecciona tu edad
+
           </option>
 
           <option value="niño">
+
             Niño
+
           </option>
 
           <option value="joven">
+
             Adolescente / Joven
+
           </option>
 
           <option value="adulto">
+
             Adulto
+
           </option>
 
         </select>
 
       </div>
 
-
       <div class="form-group">
 
         <label for="cabello">
+
           ¿Qué tipo de cabello tienes?
+
         </label>
 
         <select id="cabello">
 
           <option value="">
+
             Selecciona tu tipo de cabello
+
           </option>
 
           <option value="lacio">
+
             Lacio
+
           </option>
 
           <option value="ondulado">
+
             Ondulado
+
           </option>
 
           <option value="rizado">
+
             Rizado
+
           </option>
 
           <option value="grueso">
+
             Grueso
+
           </option>
 
           <option value="delgado">
+
             Delgado
+
           </option>
 
         </select>
 
       </div>
 
-
       <div class="form-group">
 
         <label for="cara">
+
           ¿Qué forma de cara tienes?
+
         </label>
 
         <select id="cara">
 
           <option value="">
+
             Selecciona la forma de tu cara
+
           </option>
 
           <option value="ovalada">
+
             Ovalada
+
           </option>
 
           <option value="redonda">
+
             Redonda
+
           </option>
 
           <option value="cuadrada">
+
             Cuadrada
+
           </option>
 
           <option value="alargada">
+
             Alargada
+
           </option>
 
           <option value="corazon">
+
             Corazón
+
           </option>
 
         </select>
 
       </div>
 
-
       <div class="form-group">
 
         <label for="preferencia">
+
           ¿Qué estilo buscas?
+
         </label>
 
         <select id="preferencia">
 
           <option value="">
+
             Selecciona un estilo
+
           </option>
 
           <option value="clasico">
+
             Clásico
+
           </option>
 
           <option value="moderno">
+
             Moderno
+
           </option>
 
           <option value="degradado">
+
             Degradado
+
           </option>
 
           <option value="atrevido">
+
             Algo diferente / atrevido
+
           </option>
 
         </select>
 
       </div>
 
+      <button
 
-      <button class="button" onclick="recomendarCorte()">
+        class="button"
+
+        onclick="recomendarCorte()"
+
+      >
+
         ✨ RECOMENDAR MI CORTE
-      </button>
 
+      </button>
 
       <div id="resultadoIA" class="ai-result">
 
         <h3>
+
           Tu recomendación
+
         </h3>
 
         <p id="textoIA"></p>
@@ -675,127 +1042,181 @@
 
   </section>
 
-
   <!-- =========================
+
        AGENDA
+
   ========================= -->
 
   <section id="agenda">
 
     <h2 class="section-title">
+
       AGENDA TU CITA
+
     </h2>
 
     <p class="section-subtitle">
-      Elige el día y horario que prefieras.
+
+      Llena tus datos y envía tu solicitud directamente por WhatsApp.
+
     </p>
 
-
     <div class="appointment-box">
+
+      <p class="whatsapp-info">
+
+        Tu solicitud será enviada al WhatsApp de
+
+        <span class="whatsapp-number">
+
+          Giovanni Barber
+
+        </span>.
+
+      </p>
 
       <form id="citaForm">
 
         <div class="form-group">
 
           <label for="nombre">
+
             Tu nombre
+
           </label>
 
           <input
+
             type="text"
+
             id="nombre"
+
             placeholder="Escribe tu nombre"
+
             required
+
           >
 
         </div>
-
 
         <div class="form-group">
 
           <label for="telefono">
-            Teléfono
+
+            Tu teléfono
+
           </label>
 
           <input
+
             type="tel"
+
             id="telefono"
+
             placeholder="Tu número"
+
             required
+
           >
 
         </div>
-
 
         <div class="form-group">
 
           <label for="fecha">
+
             Fecha
+
           </label>
 
           <input
+
             type="date"
+
             id="fecha"
+
             required
+
           >
 
         </div>
-
 
         <div class="form-group">
 
           <label for="hora">
+
             Hora
+
           </label>
 
           <input
+
             type="time"
+
             id="hora"
+
             required
+
           >
 
         </div>
 
-
         <div class="form-group">
 
           <label for="servicio">
+
             Servicio
+
           </label>
 
           <select id="servicio" required>
 
             <option value="">
+
               Selecciona un servicio
+
             </option>
 
-            <option>
+            <option value="Corte de cabello">
+
               Corte de cabello
+
             </option>
 
-            <option>
+            <option value="Corte + barba">
+
               Corte + barba
+
             </option>
 
-            <option>
+            <option value="Barba">
+
               Barba
+
             </option>
 
-            <option>
+            <option value="Corte infantil">
+
               Corte infantil
+
             </option>
 
           </select>
 
         </div>
 
+        <button
 
-        <button class="button" type="submit">
+          class="button"
+
+          type="submit"
+
+        >
+
           📅 SOLICITAR CITA
+
         </button>
-
-
-        <div id="mensajeCita" class="success-message"></div>
 
       </form>
 
@@ -803,352 +1224,436 @@
 
   </section>
 
-
   <!-- =========================
+
        OPINIONES
+
   ========================= -->
 
   <section id="opiniones">
 
     <h2 class="section-title">
+
       OPINIONES
+
     </h2>
 
     <p class="section-subtitle">
-      Lo que dicen mis clientes.
-    </p>
 
+      Lo que dicen mis clientes.
+
+    </p>
 
     <div class="reviews">
 
-
       <div class="review">
 
         <div class="stars">
+
           ★★★★★
+
         </div>
 
         <p>
+
           Excelente servicio y muy buen trabajo.
+
           El corte quedó justo como lo quería.
+
         </p>
 
         <strong>
+
           Cliente
+
         </strong>
 
       </div>
 
-
       <div class="review">
 
         <div class="stars">
+
           ★★★★★
+
         </div>
 
         <p>
+
           Muy buena atención y excelentes acabados.
+
           Definitivamente regreso.
+
         </p>
 
         <strong>
+
           Cliente
+
         </strong>
 
       </div>
 
-
       <div class="review">
 
         <div class="stars">
+
           ★★★★★
+
         </div>
 
         <p>
+
           Buen ambiente, buen trato y un corte
+
           muy bien hecho.
+
         </p>
 
         <strong>
+
           Cliente
+
         </strong>
 
       </div>
-
 
       <div class="review">
 
         <div class="stars">
+
           ★★★★★
+
         </div>
 
         <p>
+
           Me explicaron qué corte me podía quedar
+
           mejor y quedé muy satisfecho.
+
         </p>
 
         <strong>
+
           Cliente
+
         </strong>
 
       </div>
-
 
     </div>
 
   </section>
 
-
   <!-- =========================
+
        CONÓCEME
+
   ========================= -->
 
   <section id="conoceme">
 
     <h2 class="section-title">
+
       CONÓCEME
+
     </h2>
 
     <p class="section-subtitle">
-      Un poco sobre Giovanni Barbero.
-    </p>
 
+      Un poco sobre Giovanni Barber.
+
+    </p>
 
     <div class="about">
 
       <h3>
-        Giovanni Barbero
+
+        Giovanni Barber
+
       </h3>
 
       <p>
+
         Soy Giovanni, barbero apasionado por los cortes,
+
         los detalles y el estilo personal de cada cliente.
+
         Mi objetivo es que cada persona salga de la barbería
+
         con un corte que le guste y con el que se sienta cómodo.
+
       </p>
 
       <br>
 
       <p>
-        Aquí puedes conocer mi trabajo, elegir tu estilo
-        y solicitar tu cita de una manera sencilla.
+
+        Aquí puedes elegir tu estilo y solicitar tu cita
+
+        de una manera sencilla y rápida.
+
       </p>
 
     </div>
 
   </section>
 
-
   <!-- =========================
+
        FOOTER
+
   ========================= -->
 
   <footer>
 
     <p>
-      <strong>Giovanni Barbero</strong>
+
+      <strong>Giovanni Barber</strong>
+
     </p>
 
     <p>
+
       Estilo que habla por ti.
+
     </p>
 
   </footer>
 
-
   <!-- =========================
+
        JAVASCRIPT
+
   ========================= -->
 
   <script>
 
     /* =========================
+
        RECOMENDADOR DE CORTE
+
     ========================= */
 
     function recomendarCorte() {
 
       const edad =
+
         document.getElementById("edad").value;
 
       const cabello =
+
         document.getElementById("cabello").value;
 
       const cara =
+
         document.getElementById("cara").value;
 
       const preferencia =
+
         document.getElementById("preferencia").value;
 
-
       const resultado =
+
         document.getElementById("resultadoIA");
 
       const texto =
-        document.getElementById("textoIA");
 
+        document.getElementById("textoIA");
 
       if (!edad || !cabello || !cara || !preferencia) {
 
         resultado.style.display = "block";
 
         texto.innerHTML =
+
           "Completa todas las opciones para poder recomendarte un corte.";
 
         return;
+
       }
 
-
       let corte = "";
-
-
-      /* CARA */
 
       if (cara === "ovalada") {
 
         corte =
-          "Un taper fade o un crop texturizado";
+
+          "un taper fade o un crop texturizado";
 
       }
 
       else if (cara === "redonda") {
 
         corte =
-          "Un mid fade con volumen arriba";
+
+          "un mid fade con volumen arriba";
 
       }
 
       else if (cara === "cuadrada") {
 
         corte =
-          "Un low fade o un corte clásico texturizado";
+
+          "un low fade o un corte clásico texturizado";
 
       }
 
       else if (cara === "alargada") {
 
         corte =
-          "Un taper con textura y volumen moderado";
+
+          "un taper con textura y volumen moderado";
 
       }
 
       else if (cara === "corazon") {
 
         corte =
-          "Un taper fade con textura arriba";
+
+          "un taper fade con textura arriba";
 
       }
-
-
-      /* ESTILO */
 
       if (preferencia === "clasico") {
 
         corte =
-          "Un corte clásico con taper y acabado limpio";
+
+          "un corte clásico con taper y acabado limpio";
 
       }
 
       else if (preferencia === "moderno") {
 
         corte =
-          "Un taper fade moderno con textura";
+
+          "un taper fade moderno con textura";
 
       }
 
       else if (preferencia === "degradado") {
 
         corte =
-          "Un fade bien definido con textura arriba";
+
+          "un fade bien definido con textura arriba";
 
       }
 
       else if (preferencia === "atrevido") {
 
         corte =
-          "Un burst fade o un estilo texturizado más atrevido";
+
+          "un burst fade o un estilo texturizado más atrevido";
 
       }
 
-
       resultado.style.display = "block";
 
-
       texto.innerHTML =
+
         "Por tus características, te recomiendo <strong>"
+
         + corte
+
         + "</strong>. Tu tipo de cabello "
+
         + cabello
-        + " puede adaptarse muy bien a este estilo. " +
-        "Cuando vengas a la barbería podemos ajustar el corte a tu gusto.";
+
+        + " puede adaptarse muy bien a este estilo. "
+
+        + "Cuando vengas a la barbería podemos ajustar "
+
+        + "el corte a tu gusto.";
 
     }
 
-
     /* =========================
-       AGENDA
+
+       AGENDA → WHATSAPP
+
     ========================= */
 
     document
+
       .getElementById("citaForm")
+
       .addEventListener("submit", function(event) {
 
         event.preventDefault();
 
-
         const nombre =
+
           document.getElementById("nombre").value;
 
+        const telefono =
+
+          document.getElementById("telefono").value;
+
         const fecha =
+
           document.getElementById("fecha").value;
 
         const hora =
+
           document.getElementById("hora").value;
 
         const servicio =
+
           document.getElementById("servicio").value;
 
-
         const mensaje =
-          document.getElementById("mensajeCita");
 
+          "Hola Giovanni Barber 👋\n\n"
 
-        mensaje.style.display = "block";
+          + "Quiero solicitar una cita.\n\n"
 
+          + "👤 Nombre: " + nombre + "\n"
 
-        mensaje.innerHTML =
-          "✅ Solicitud preparada para <strong>"
-          + nombre
-          + "</strong>.<br><br>"
-          + "Servicio: "
-          + servicio
-          + "<br>"
-          + "Fecha: "
-          + fecha
-          + "<br>"
-          + "Hora: "
-          + hora
-          + "<br><br>"
-          + "La cita quedó registrada en esta página. "
-          + "Puedes conectar este formulario después a WhatsApp o a un sistema de reservas.";
+          + "📱 Teléfono: " + telefono + "\n"
+
+          + "📅 Fecha: " + fecha + "\n"
+
+          + "🕐 Hora: " + hora + "\n"
+
+          + "💈 Servicio: " + servicio;
+
+        const numeroWhatsApp =
+
+          "522851049691";
+
+        const url =
+
+          "https://wa.me/"
+
+          + numeroWhatsApp
+
+          + "?text="
+
+          + encodeURIComponent(mensaje);
+
+        window.location.href = url;
 
       });
 
-
     /* =========================
-       EVITAR FECHAS PASADAS
+
+       NO PERMITIR FECHAS PASADAS
+
     ========================= */
 
     const fechaInput =
+
       document.getElementById("fecha");
 
     const hoy =
+
       new Date().toISOString().split("T")[0];
 
     fechaInput.min = hoy;
 
-
   </script>
 
 </body>
+
 </html>
