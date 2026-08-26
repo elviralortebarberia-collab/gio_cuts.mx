@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gio Cuts MX</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 30px;
+      font-size: 38px;
+    }
+
+    p {
+      color: #aaa;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>GIO_CUTS.MX</h1>
+  <p>Mis cortes</p>
+
+  <h2>Galería</h2>
+
+  <div class="galeria">
+
+    <img src="corte1.jpg" alt="Corte 1">
+    <img src="corte2.jpg" alt="Corte 2">
+    <img src="corte3.jpg" alt="Corte 3">
+    <img src="corte4.jpg" alt="Corte 4">
+    <img src="corte5.jpg" alt="Corte 5">
+    <img src="corte6.jpg" alt="Corte 6">
+
+  </div>
+
+</body>
+</html>
