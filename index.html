@@ -4,1655 +4,1601 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Giovanni Barber</title>
+<title>Giovanni Barber</title>
 
-  <style>
+<style>
 
-    * {
+*{
 
-      box-sizing: border-box;
+  box-sizing:border-box;
 
-      margin: 0;
+  margin:0;
 
-      padding: 0;
+  padding:0;
 
-    }
+}
 
-    html {
+html{
 
-      scroll-behavior: smooth;
+  scroll-behavior:smooth;
 
-    }
+}
 
-    body {
+body{
 
-      font-family: Arial, Helvetica, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
 
-      background: #0b0708;
+  background:#090909;
 
-      color: #f5f5f5;
+  color:white;
 
-    }
+}
 
-    /* =========================
+:root{
 
-       PORTADA
+  --dorado:#f6c453;
 
-    ========================= */
+  --naranja:#ff7a18;
 
-    header {
+  --rojo:#e63b22;
 
-      background: #0b0708;
+  --gris:#171717;
 
-      border-bottom: 1px solid #302326;
+  --gris2:#242424;
 
-      padding: 28px 20px 25px;
+  --blanco:#f5f5f5;
 
-      text-align: center;
+}
 
-    }
+/* NAVBAR */
 
-    .logo {
+nav{
 
-      display: inline-flex;
+  position:fixed;
 
-      align-items: center;
+  top:0;
 
-      justify-content: center;
+  left:0;
 
-      gap: 18px;
+  width:100%;
 
-    }
+  z-index:1000;
 
-    .logo-circle {
+  background:rgba(8,8,8,.92);
 
-      width: 92px;
+  backdrop-filter:blur(15px);
 
-      height: 92px;
+  border-bottom:1px solid rgba(246,196,83,.18);
 
-      border: 5px solid #e6b83f;
+}
 
-      border-radius: 50%;
+.nav-container{
 
-      display: flex;
+  max-width:1100px;
 
-      align-items: center;
+  margin:auto;
 
-      justify-content: center;
+  display:flex;
 
-      color: #e6b83f;
+  align-items:center;
 
-      font-family: Georgia, serif;
+  justify-content:space-between;
 
-      font-size: 35px;
+  padding:16px 20px;
 
-      font-weight: bold;
+}
 
-      box-shadow: 0 0 18px rgba(230, 184, 63, 0.15);
+.logo{
 
-    }
+  font-size:24px;
 
-    .logo-text {
+  font-weight:900;
 
-      text-align: left;
+  background:linear-gradient(90deg,var(--dorado),var(--naranja),var(--rojo));
 
-      color: #e6b83f;
+  -webkit-background-clip:text;
 
-      font-family: Georgia, serif;
+  color:transparent;
 
-      font-style: italic;
+}
 
-    }
+.menu{
 
-    .logo-text h1 {
+  display:flex;
 
-      font-size: 42px;
+  gap:22px;
 
-      line-height: 0.95;
+  list-style:none;
 
-    }
+}
 
-    .logo-text h2 {
+.menu a{
 
-      font-size: 40px;
+  color:white;
 
-      margin-top: 7px;
+  text-decoration:none;
 
-    }
+  font-weight:bold;
 
-    .barber-icon {
+  font-size:14px;
 
-      font-size: 30px;
+}
 
-      margin-left: 8px;
+.menu a:hover{
 
-    }
+  color:var(--dorado);
 
-    /* =========================
+}
 
-       MENÚ
+.menu-btn{
 
-    ========================= */
+  display:none;
 
-    nav {
+  font-size:28px;
 
-      position: sticky;
+  cursor:pointer;
 
-      top: 0;
+}
 
-      z-index: 100;
+/* HERO */
 
-      background: #0b0708;
+.hero{
 
-      border-bottom: 1px solid #302326;
+  min-height:100vh;
 
-      overflow-x: auto;
+  display:flex;
 
-    }
+  align-items:center;
 
-    nav ul {
+  justify-content:center;
 
-      list-style: none;
+  text-align:center;
 
-      display: flex;
+  padding:120px 20px 70px;
 
-      justify-content: center;
+  position:relative;
 
-      min-width: max-content;
+  overflow:hidden;
 
-    }
+  background:
 
-    nav a {
+    radial-gradient(circle at 20% 20%,rgba(246,196,83,.16),transparent 30%),
 
-      display: block;
+    radial-gradient(circle at 80% 70%,rgba(230,59,34,.16),transparent 30%),
 
-      padding: 21px 27px;
+    #090909;
 
-      color: #d5d1d2;
+}
 
-      text-decoration: none;
+.hero-content{
 
-      font-size: 17px;
+  max-width:850px;
 
-      font-weight: bold;
+}
 
-      transition: 0.3s;
+.badge{
 
-    }
+  display:inline-block;
 
-    nav a:hover {
+  padding:10px 18px;
 
-      color: #e6b83f;
+  border:1px solid rgba(246,196,83,.5);
 
-    }
+  border-radius:30px;
 
-    /* =========================
+  color:var(--dorado);
 
-       SECCIONES
+  margin-bottom:25px;
 
-    ========================= */
+  font-weight:bold;
 
-    section {
+}
 
-      padding: 80px 20px;
+.hero h1{
 
-      max-width: 1100px;
+  font-size:clamp(55px,10vw,110px);
 
-      margin: auto;
+  line-height:.9;
 
-    }
+  font-weight:900;
 
-    .hero {
+  background:linear-gradient(90deg,#fff,var(--dorado),var(--naranja),var(--rojo));
 
-      min-height: 600px;
+  -webkit-background-clip:text;
 
-      display: flex;
+  color:transparent;
 
-      align-items: center;
+  margin-bottom:25px;
 
-      justify-content: center;
+}
 
-      text-align: center;
+.hero p{
 
-    }
+  color:#cfcfcf;
 
-    .hero-content {
+  font-size:20px;
 
-      max-width: 800px;
+  line-height:1.6;
 
-    }
+  max-width:650px;
 
-    .hero h2 {
+  margin:auto;
 
-      color: #e6b83f;
+}
 
-      font-family: Georgia, serif;
+.buttons{
 
-      font-size: clamp(48px, 8vw, 82px);
+  display:flex;
 
-      line-height: 1;
+  justify-content:center;
 
-      margin-bottom: 25px;
+  gap:15px;
 
-    }
+  flex-wrap:wrap;
 
-    .hero p {
+  margin-top:35px;
 
-      color: #c9c5c6;
+}
 
-      font-size: 21px;
+.btn{
 
-      line-height: 1.6;
+  display:inline-block;
 
-      margin-bottom: 32px;
+  padding:15px 25px;
 
-    }
+  border-radius:50px;
 
-    .button {
+  text-decoration:none;
 
-      display: inline-block;
+  font-weight:bold;
 
-      background: #e6b83f;
+  transition:.25s;
 
-      color: #0b0708;
+  cursor:pointer;
 
-      border: none;
+  border:none;
 
-      padding: 16px 28px;
+}
 
-      border-radius: 8px;
+.btn-main{
 
-      font-size: 17px;
+  background:linear-gradient(90deg,var(--dorado),var(--naranja));
 
-      font-weight: bold;
+  color:#111;
 
-      text-decoration: none;
+}
 
-      cursor: pointer;
+.btn-main:hover{
 
-      transition: 0.3s;
+  transform:translateY(-3px);
 
-    }
+}
 
-    .button:hover {
+.btn-outline{
 
-      transform: translateY(-2px);
+  color:white;
 
-      box-shadow: 0 8px 25px rgba(230, 184, 63, 0.2);
+  border:1px solid #555;
 
-    }
+  background:#161616;
 
-    .section-title {
+}
 
-      text-align: center;
+.btn-outline:hover{
 
-      color: #e6b83f;
+  border-color:var(--dorado);
 
-      font-family: Georgia, serif;
+}
 
-      font-size: clamp(40px, 7vw, 62px);
+/* SECCIONES */
 
-      margin-bottom: 12px;
+section{
 
-    }
+  padding:90px 20px;
 
-    .section-subtitle {
+}
 
-      text-align: center;
+.container{
 
-      color: #bdb7b9;
+  max-width:1050px;
 
-      font-size: 20px;
+  margin:auto;
 
-      margin-bottom: 45px;
+}
 
-    }
+.section-title{
 
-    /* =========================
+  text-align:center;
 
-       ELIGE TU CORTE CON IA
+  margin-bottom:45px;
 
-    ========================= */
+}
 
-    .ai-box {
+.section-title span{
 
-      background: #130e10;
+  color:var(--dorado);
 
-      border: 1px solid #3b2b2f;
+  font-size:14px;
 
-      border-radius: 20px;
+  font-weight:bold;
 
-      padding: 35px;
+  letter-spacing:3px;
 
-      max-width: 850px;
+}
 
-      margin: auto;
+.section-title h2{
 
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+  font-size:clamp(35px,6vw,60px);
 
-    }
+  margin-top:10px;
 
-    .form-group {
+}
 
-      margin-bottom: 24px;
+.section-title p{
 
-    }
+  color:#aaa;
 
-    label {
+  margin-top:12px;
 
-      display: block;
+}
 
-      color: #e6b83f;
+/* IA */
 
-      font-weight: bold;
+.ai-section{
 
-      font-size: 17px;
+  background:
 
-      margin-bottom: 9px;
+    linear-gradient(135deg,#151515,#211711,#151515);
 
-    }
+}
 
-    select,
+.ai-box{
 
-    input,
+  background:#111;
 
-    textarea {
+  border:1px solid #333;
 
-      width: 100%;
+  border-radius:30px;
 
-      padding: 15px;
+  padding:30px;
 
-      background: #0b0708;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
 
-      color: white;
+}
 
-      border: 1px solid #4a373b;
+.form-grid{
 
-      border-radius: 8px;
+  display:grid;
 
-      font-size: 16px;
+  grid-template-columns:repeat(2,1fr);
 
-      outline: none;
+  gap:20px;
 
-    }
+}
 
-    select:focus,
+label{
 
-    input:focus,
+  display:block;
 
-    textarea:focus {
+  margin-bottom:8px;
 
-      border-color: #e6b83f;
+  color:#ddd;
 
-    }
+  font-weight:bold;
 
-    .ai-result {
+}
 
-      display: none;
+select,
 
-      margin-top: 28px;
+input,
 
-      padding: 25px;
+textarea{
 
-      border-left: 4px solid #e6b83f;
+  width:100%;
 
-      background: #0b0708;
+  padding:15px;
 
-      border-radius: 8px;
+  border-radius:14px;
 
-    }
+  border:1px solid #444;
 
-    .ai-result h3 {
+  background:#202020;
 
-      color: #e6b83f;
+  color:white;
 
-      margin-bottom: 12px;
+  font-size:16px;
 
-      font-size: 24px;
+  outline:none;
 
-    }
+}
 
-    .ai-result p {
+select:focus,
 
-      color: #d2ced0;
+input:focus,
 
-      line-height: 1.6;
+textarea:focus{
 
-      font-size: 17px;
+  border-color:var(--dorado);
 
-    }
+}
 
-    /* =========================
+.photo-box{
 
-       AGENDA
+  margin-top:20px;
 
-    ========================= */
+}
 
-    .appointment-box {
+.preview{
 
-      background: #130e10;
+  width:100%;
 
-      border: 1px solid #3b2b2f;
+  max-height:280px;
 
-      border-radius: 20px;
+  object-fit:cover;
 
-      padding: 35px;
+  border-radius:20px;
 
-      max-width: 700px;
+  margin-top:15px;
 
-      margin: auto;
+  display:none;
 
-    }
+}
 
-    .whatsapp-info {
+.recommendation{
 
-      text-align: center;
+  display:none;
 
-      color: #bdb7b9;
+  margin-top:25px;
 
-      margin-bottom: 25px;
+  padding:25px;
 
-      line-height: 1.6;
+  border-radius:20px;
 
-    }
+  background:linear-gradient(135deg,#292018,#171717);
 
-    .whatsapp-number {
+  border:1px solid var(--dorado);
 
-      color: #e6b83f;
+}
 
-      font-weight: bold;
+.recommendation h3{
 
-    }
+  color:var(--dorado);
 
-    /* =========================
+  margin-bottom:10px;
 
-       OPINIONES
+}
 
-    ========================= */
+.recommendation p{
 
-    .reviews {
+  color:#ddd;
 
-      display: grid;
+  line-height:1.6;
 
-      grid-template-columns: repeat(2, 1fr);
+}
 
-      gap: 25px;
+/* TARJETAS */
 
-      max-width: 950px;
+.cards{
 
-      margin: auto;
+  display:grid;
 
-    }
+  grid-template-columns:repeat(3,1fr);
 
-    .review {
+  gap:20px;
 
-      background: #130e10;
+}
 
-      border: 1px solid #3b2b2f;
+.card{
 
-      border-radius: 18px;
+  padding:30px;
 
-      padding: 30px;
+  background:linear-gradient(145deg,#191919,#101010);
 
-    }
+  border:1px solid #333;
 
-    .stars {
+  border-radius:25px;
 
-      color: #e6b83f;
+  transition:.3s;
 
-      font-size: 30px;
+}
 
-      letter-spacing: 3px;
+.card:hover{
 
-      margin-bottom: 20px;
+  transform:translateY(-7px);
 
-    }
+  border-color:var(--dorado);
 
-    .review p {
+}
 
-      color: #d0cccd;
+.icon{
 
-      font-size: 18px;
+  font-size:40px;
 
-      line-height: 1.7;
+  margin-bottom:20px;
 
-      margin-bottom: 20px;
+}
 
-    }
+.card h3{
 
-    .review strong {
+  margin-bottom:12px;
 
-      color: white;
+}
 
-      font-size: 18px;
+.card p{
 
-    }
+  color:#aaa;
 
-    /* =========================
+  line-height:1.6;
 
-       CONÓCEME
+}
 
-    ========================= */
+/* AGENDAR */
 
-    .about {
+.booking{
 
-      max-width: 800px;
+  background:
 
-      margin: auto;
+    radial-gradient(circle at 80% 30%,rgba(255,122,24,.18),transparent 30%),
 
-      text-align: center;
+    #0d0d0d;
 
-      background: #130e10;
+}
 
-      border: 1px solid #3b2b2f;
+.booking-box{
 
-      border-radius: 20px;
+  max-width:750px;
 
-      padding: 40px;
+  margin:auto;
 
-    }
+  padding:40px;
 
-    .about h3 {
+  border-radius:30px;
 
-      color: #e6b83f;
+  text-align:center;
 
-      font-family: Georgia, serif;
+  background:linear-gradient(145deg,#20170f,#111);
 
-      font-size: 36px;
+  border:1px solid rgba(246,196,83,.35);
 
-      margin-bottom: 20px;
+}
 
-    }
+.booking-box h2{
 
-    .about p {
+  font-size:42px;
 
-      color: #ccc7c9;
+  margin-bottom:15px;
 
-      font-size: 19px;
+}
 
-      line-height: 1.8;
+.booking-box p{
 
-    }
+  color:#bbb;
 
-    /* =========================
+  line-height:1.6;
 
-       FOOTER
+  margin-bottom:25px;
 
-    ========================= */
+}
 
-    footer {
+/* OPINIONES */
 
-      text-align: center;
+.reviews{
 
-      padding: 45px 20px;
+  background:#111;
 
-      border-top: 1px solid #302326;
+}
 
-      color: #aaa4a6;
+.review-form{
 
-    }
+  max-width:650px;
 
-    footer strong {
+  margin:auto;
 
-      color: #e6b83f;
+  background:#191919;
 
-    }
+  padding:30px;
 
-    /* =========================
+  border-radius:25px;
 
-       MÓVIL
+  border:1px solid #333;
 
-    ========================= */
+}
 
-    @media (max-width: 700px) {
+.form-group{
 
-      .logo {
+  margin-bottom:18px;
 
-        gap: 11px;
+}
 
-      }
+.rating{
 
-      .logo-circle {
+  display:flex;
 
-        width: 75px;
+  gap:8px;
 
-        height: 75px;
+  font-size:32px;
 
-        font-size: 28px;
+  margin-top:8px;
 
-        border-width: 4px;
+}
 
-      }
+.star{
 
-      .logo-text h1 {
+  cursor:pointer;
 
-        font-size: 32px;
+  color:#555;
 
-      }
+}
 
-      .logo-text h2 {
+.star.active{
 
-        font-size: 30px;
+  color:var(--dorado);
 
-      }
+}
 
-      .barber-icon {
+.review-list{
 
-        font-size: 23px;
+  max-width:800px;
 
-      }
+  margin:35px auto 0;
 
-      nav ul {
+  display:grid;
 
-        justify-content: flex-start;
+  gap:15px;
 
-      }
+}
 
-      nav a {
+.review{
 
-        padding: 18px 20px;
+  padding:22px;
 
-        font-size: 15px;
+  background:#1c1c1c;
 
-      }
+  border-radius:20px;
 
-      section {
+  border-left:4px solid var(--dorado);
 
-        padding: 65px 16px;
+}
 
-      }
+.review strong{
 
-      .ai-box,
+  color:var(--dorado);
 
-      .appointment-box,
+}
 
-      .about {
+.review .stars{
 
-        padding: 25px 20px;
+  margin:7px 0;
 
-      }
+  color:var(--dorado);
 
-      .reviews {
+}
 
-        grid-template-columns: 1fr;
+/* CONOCEME */
 
-      }
+.about{
 
-      .hero {
+  background:
 
-        min-height: 500px;
+    linear-gradient(135deg,#16120e,#090909);
 
-      }
+}
 
-    }
+.about-box{
 
-  </style>
+  max-width:800px;
+
+  margin:auto;
+
+  text-align:center;
+
+}
+
+.about-box h2{
+
+  font-size:50px;
+
+  margin-bottom:20px;
+
+}
+
+.about-box p{
+
+  color:#bbb;
+
+  line-height:1.9;
+
+  font-size:18px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+  text-align:center;
+
+  padding:40px 20px;
+
+  background:#050505;
+
+  border-top:1px solid #222;
+
+}
+
+footer .logo{
+
+  margin-bottom:10px;
+
+  display:block;
+
+}
+
+footer p{
+
+  color:#777;
+
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+
+  position:fixed;
+
+  right:20px;
+
+  bottom:20px;
+
+  z-index:999;
+
+  width:60px;
+
+  height:60px;
+
+  border-radius:50%;
+
+  background:#25D366;
+
+  color:white;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-decoration:none;
+
+  font-size:28px;
+
+  box-shadow:0 8px 30px rgba(0,0,0,.5);
+
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+  .menu{
+
+    display:none;
+
+    position:absolute;
+
+    top:70px;
+
+    left:0;
+
+    width:100%;
+
+    flex-direction:column;
+
+    padding:25px;
+
+    background:#111;
+
+    text-align:center;
+
+  }
+
+  .menu.show{
+
+    display:flex;
+
+  }
+
+  .menu-btn{
+
+    display:block;
+
+  }
+
+  .form-grid,
+
+  .cards{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .hero h1{
+
+    font-size:62px;
+
+  }
+
+  .hero p{
+
+    font-size:17px;
+
+  }
+
+  section{
+
+    padding:70px 15px;
+
+  }
+
+  .ai-box,
+
+  .booking-box,
+
+  .review-form{
+
+    padding:22px;
+
+  }
+
+  .booking-box h2,
+
+  .about-box h2{
+
+    font-size:36px;
+
+  }
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-  <!-- =========================
+<!-- NAVBAR -->
 
-       PORTADA
+<nav>
 
-  ========================= -->
+  <div class="nav-container">
 
-  <header>
+    <div class="logo">GIOVANNI BARBER</div>
 
-    <div class="logo">
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-      <div class="logo-circle">
+    <ul class="menu" id="menu">
 
-        GB
+      <li><a href="#inicio">Inicio</a></li>
 
-      </div>
+      <li><a href="#ia">Elige tu corte</a></li>
 
-      <div class="logo-text">
+      <li><a href="#agendar">Agendar</a></li>
 
-        <h1>Giovanni</h1>
+      <li><a href="#opiniones">Opiniones</a></li>
 
-        <h2>Barber</h2>
-
-      </div>
-
-      <div class="barber-icon">
-
-        💈
-
-      </div>
-
-    </div>
-
-  </header>
-
-  <!-- =========================
-
-       MENÚ
-
-  ========================= -->
-
-  <nav>
-
-    <ul>
-
-      <li>
-
-        <a href="#inicio">INICIO</a>
-
-      </li>
-
-      <li>
-
-        <a href="#corte">ELIGE TU CORTE</a>
-
-      </li>
-
-      <li>
-
-        <a href="#agenda">AGENDA</a>
-
-      </li>
-
-      <li>
-
-        <a href="#opiniones">OPINIONES</a>
-
-      </li>
-
-      <li>
-
-        <a href="#conoceme">CONÓCEME</a>
-
-      </li>
+      <li><a href="#conoceme">Conóceme</a></li>
 
     </ul>
 
-  </nav>
+  </div>
 
-  <!-- =========================
+</nav>
 
-       INICIO
+<!-- INICIO -->
 
-  ========================= -->
+<section class="hero" id="inicio">
 
-  <section id="inicio" class="hero">
+  <div class="hero-content">
 
-    <div class="hero-content">
+    <div class="badge">✂️ BARBERÍA • ESTILO • PERSONALIDAD</div>
 
-      <h2>
+    <h1>GIOVANNI<br>BARBER</h1>
 
-        GIOVANNI<br>
+    <p>
 
-        BARBER
+      Tu estilo empieza con un buen corte.
 
-      </h2>
+      Encuentra el look que mejor va contigo
 
-      <p>
+      y agenda tu cita fácilmente.
 
-        Estilo, precisión y atención personalizada.
+    </p>
 
-        Encuentra el corte que mejor va contigo.
+    <div class="buttons">
 
-      </p>
+      <a href="#ia" class="btn btn-main">
 
-      <a href="#corte" class="button">
+        ✂️ Elegir mi corte
 
-        ELIGE TU CORTE
+      </a>
+
+      <a href="#agendar" class="btn btn-outline">
+
+        📅 Agendar cita
 
       </a>
 
     </div>
 
-  </section>
+  </div>
 
-  <!-- =========================
+</section>
 
-       ELIGE TU CORTE CON IA
+<!-- IA -->
 
-  ========================= -->
+<section class="ai-section" id="ia">
 
-  <section id="corte">
+  <div class="container">
 
-    <h2 class="section-title">
+    <div class="section-title">
 
-      ELIGE TU CORTE CON IA
+      <span>ESTILO PERSONALIZADO</span>
 
-    </h2>
+      <h2>Elige tu corte</h2>
 
-    <p class="section-subtitle">
+      <p>
 
-      Responde unas preguntas y recibe una recomendación.
-
-    </p>
-
-    <div class="ai-box">
-
-      <div class="form-group">
-
-        <label for="edad">
-
-          ¿Qué edad tienes?
-
-        </label>
-
-        <select id="edad">
-
-          <option value="">
-
-            Selecciona tu edad
-
-          </option>
-
-          <option value="niño">
-
-            Niño
-
-          </option>
-
-          <option value="joven">
-
-            Adolescente / Joven
-
-          </option>
-
-          <option value="adulto">
-
-            Adulto
-
-          </option>
-
-        </select>
-
-      </div>
-
-      <div class="form-group">
-
-        <label for="cabello">
-
-          ¿Qué tipo de cabello tienes?
-
-        </label>
-
-        <select id="cabello">
-
-          <option value="">
-
-            Selecciona tu tipo de cabello
-
-          </option>
-
-          <option value="lacio">
-
-            Lacio
-
-          </option>
-
-          <option value="ondulado">
-
-            Ondulado
-
-          </option>
-
-          <option value="rizado">
-
-            Rizado
-
-          </option>
-
-          <option value="grueso">
-
-            Grueso
-
-          </option>
-
-          <option value="delgado">
-
-            Delgado
-
-          </option>
-
-        </select>
-
-      </div>
-
-      <div class="form-group">
-
-        <label for="cara">
-
-          ¿Qué forma de cara tienes?
-
-        </label>
-
-        <select id="cara">
-
-          <option value="">
-
-            Selecciona la forma de tu cara
-
-          </option>
-
-          <option value="ovalada">
-
-            Ovalada
-
-          </option>
-
-          <option value="redonda">
-
-            Redonda
-
-          </option>
-
-          <option value="cuadrada">
-
-            Cuadrada
-
-          </option>
-
-          <option value="alargada">
-
-            Alargada
-
-          </option>
-
-          <option value="corazon">
-
-            Corazón
-
-          </option>
-
-        </select>
-
-      </div>
-
-      <div class="form-group">
-
-        <label for="preferencia">
-
-          ¿Qué estilo buscas?
-
-        </label>
-
-        <select id="preferencia">
-
-          <option value="">
-
-            Selecciona un estilo
-
-          </option>
-
-          <option value="clasico">
-
-            Clásico
-
-          </option>
-
-          <option value="moderno">
-
-            Moderno
-
-          </option>
-
-          <option value="degradado">
-
-            Degradado
-
-          </option>
-
-          <option value="atrevido">
-
-            Algo diferente / atrevido
-
-          </option>
-
-        </select>
-
-      </div>
-
-      <button
-
-        class="button"
-
-        onclick="recomendarCorte()"
-
-      >
-
-        ✨ RECOMENDAR MI CORTE
-
-      </button>
-
-      <div id="resultadoIA" class="ai-result">
-
-        <h3>
-
-          Tu recomendación
-
-        </h3>
-
-        <p id="textoIA"></p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- =========================
-
-       AGENDA
-
-  ========================= -->
-
-  <section id="agenda">
-
-    <h2 class="section-title">
-
-      AGENDA TU CITA
-
-    </h2>
-
-    <p class="section-subtitle">
-
-      Llena tus datos y envía tu solicitud directamente por WhatsApp.
-
-    </p>
-
-    <div class="appointment-box">
-
-      <p class="whatsapp-info">
-
-        Tu solicitud será enviada al WhatsApp de
-
-        <span class="whatsapp-number">
-
-          Giovanni Barber
-
-        </span>.
+        Dime un poco sobre ti y te damos una recomendación.
 
       </p>
 
-      <form id="citaForm">
+    </div>
 
-        <div class="form-group">
+    <div class="ai-box">
 
-          <label for="nombre">
+      <div class="form-grid">
 
-            Tu nombre
+        <div>
 
-          </label>
+          <label>Edad</label>
 
-          <input
+          <select id="edad">
 
-            type="text"
+            <option value="">Selecciona</option>
 
-            id="nombre"
+            <option>13 - 17</option>
 
-            placeholder="Escribe tu nombre"
+            <option>18 - 25</option>
 
-            required
+            <option>26 - 35</option>
 
-          >
+            <option>36 - 50</option>
 
-        </div>
-
-        <div class="form-group">
-
-          <label for="telefono">
-
-            Tu teléfono
-
-          </label>
-
-          <input
-
-            type="tel"
-
-            id="telefono"
-
-            placeholder="Tu número"
-
-            required
-
-          >
-
-        </div>
-
-        <div class="form-group">
-
-          <label for="fecha">
-
-            Fecha
-
-          </label>
-
-          <input
-
-            type="date"
-
-            id="fecha"
-
-            required
-
-          >
-
-        </div>
-
-        <div class="form-group">
-
-          <label for="hora">
-
-            Hora
-
-          </label>
-
-          <input
-
-            type="time"
-
-            id="hora"
-
-            required
-
-          >
-
-        </div>
-
-        <div class="form-group">
-
-          <label for="servicio">
-
-            Servicio
-
-          </label>
-
-          <select id="servicio" required>
-
-            <option value="">
-
-              Selecciona un servicio
-
-            </option>
-
-            <option value="Corte de cabello">
-
-              Corte de cabello
-
-            </option>
-
-            <option value="Corte + barba">
-
-              Corte + barba
-
-            </option>
-
-            <option value="Barba">
-
-              Barba
-
-            </option>
-
-            <option value="Corte infantil">
-
-              Corte infantil
-
-            </option>
+            <option>50+</option>
 
           </select>
 
         </div>
 
-        <button
+        <div>
 
-          class="button"
+          <label>Tipo de cabello</label>
 
-          type="submit"
+          <select id="cabello">
+
+            <option value="">Selecciona</option>
+
+            <option>Lacio</option>
+
+            <option>Ondulado</option>
+
+            <option>Rizado</option>
+
+            <option>Grueso</option>
+
+            <option>Delgado</option>
+
+          </select>
+
+        </div>
+
+        <div>
+
+          <label>Forma de cara</label>
+
+          <select id="cara">
+
+            <option value="">Selecciona</option>
+
+            <option>Ovalada</option>
+
+            <option>Redonda</option>
+
+            <option>Cuadrada</option>
+
+            <option>Alargada</option>
+
+            <option>No sé</option>
+
+          </select>
+
+        </div>
+
+        <div>
+
+          <label>¿Qué estilo buscas?</label>
+
+          <select id="estilo">
+
+            <option value="">Selecciona</option>
+
+            <option>Clásico</option>
+
+            <option>Moderno</option>
+
+            <option>Fade</option>
+
+            <option>Low fade</option>
+
+            <option>Mid fade</option>
+
+            <option>High fade</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+      <div class="photo-box">
+
+        <label>📷 Agrega una foto (opcional)</label>
+
+        <input
+
+          type="file"
+
+          id="foto"
+
+          accept="image/*"
+
+          onchange="mostrarFoto(event)"
 
         >
 
-          📅 SOLICITAR CITA
+        <img id="preview" class="preview">
+
+      </div>
+
+      <div class="buttons">
+
+        <button class="btn btn-main" onclick="recomendar()">
+
+          🤖 Recomendarme un corte
 
         </button>
 
-      </form>
-
-    </div>
-
-  </section>
-
-  <!-- =========================
-
-       OPINIONES
-
-  ========================= -->
-
-  <section id="opiniones">
-
-    <h2 class="section-title">
-
-      OPINIONES
-
-    </h2>
-
-    <p class="section-subtitle">
-
-      Lo que dicen mis clientes.
-
-    </p>
-
-    <div class="reviews">
-
-      <div class="review">
-
-        <div class="stars">
-
-          ★★★★★
-
-        </div>
-
-        <p>
-
-          Excelente servicio y muy buen trabajo.
-
-          El corte quedó justo como lo quería.
-
-        </p>
-
-        <strong>
-
-          Cliente
-
-        </strong>
-
       </div>
 
-      <div class="review">
+      <div id="recommendation" class="recommendation">
 
-        <div class="stars">
+        <h3>🔥 Tu recomendación</h3>
 
-          ★★★★★
-
-        </div>
-
-        <p>
-
-          Muy buena atención y excelentes acabados.
-
-          Definitivamente regreso.
-
-        </p>
-
-        <strong>
-
-          Cliente
-
-        </strong>
-
-      </div>
-
-      <div class="review">
-
-        <div class="stars">
-
-          ★★★★★
-
-        </div>
-
-        <p>
-
-          Buen ambiente, buen trato y un corte
-
-          muy bien hecho.
-
-        </p>
-
-        <strong>
-
-          Cliente
-
-        </strong>
-
-      </div>
-
-      <div class="review">
-
-        <div class="stars">
-
-          ★★★★★
-
-        </div>
-
-        <p>
-
-          Me explicaron qué corte me podía quedar
-
-          mejor y quedé muy satisfecho.
-
-        </p>
-
-        <strong>
-
-          Cliente
-
-        </strong>
+        <p id="recommendationText"></p>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
 
-  <!-- =========================
+</section>
 
-       CONÓCEME
+<!-- SERVICIOS -->
 
-  ========================= -->
+<section>
 
-  <section id="conoceme">
+  <div class="container">
 
-    <h2 class="section-title">
+    <div class="section-title">
 
-      CONÓCEME
+      <span>LO QUE HACEMOS</span>
 
-    </h2>
+      <h2>Tu estilo, tu manera</h2>
 
-    <p class="section-subtitle">
+    </div>
 
-      Un poco sobre Giovanni Barber.
+    <div class="cards">
+
+      <div class="card">
+
+        <div class="icon">✂️</div>
+
+        <h3>Cortes modernos</h3>
+
+        <p>
+
+          Cortes actuales adaptados a tu estilo
+
+          y personalidad.
+
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <div class="icon">🔥</div>
+
+        <h3>Fade & degradados</h3>
+
+        <p>
+
+          Degradados limpios y definidos para
+
+          un acabado moderno.
+
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <div class="icon">💈</div>
+
+        <h3>Estilo personalizado</h3>
+
+        <p>
+
+          Buscamos que tu corte vaya contigo
+
+          y con la imagen que quieres proyectar.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- AGENDAR -->
+
+<section class="booking" id="agendar">
+
+  <div class="booking-box">
+
+    <h2>¿Listo para tu próximo corte?</h2>
+
+    <p>
+
+      Agenda tu cita directamente por WhatsApp.
+
+      Te responderemos para confirmar tu horario.
 
     </p>
 
-    <div class="about">
+    <a
 
-      <h3>
+      class="btn btn-main"
 
-        Giovanni Barber
+      href="https://wa.me/5212851049691?text=Hola%20Giovanni%2C%20quiero%20agendar%20una%20cita."
 
-      </h3>
+      target="_blank"
+
+    >
+
+      📲 Agendar por WhatsApp
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- OPINIONES -->
+
+<section class="reviews" id="opiniones">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>CLIENTES</span>
+
+      <h2>Opiniones</h2>
 
       <p>
 
-        Soy Giovanni, barbero apasionado por los cortes,
-
-        los detalles y el estilo personal de cada cliente.
-
-        Mi objetivo es que cada persona salga de la barbería
-
-        con un corte que le guste y con el que se sienta cómodo.
-
-      </p>
-
-      <br>
-
-      <p>
-
-        Aquí puedes elegir tu estilo y solicitar tu cita
-
-        de una manera sencilla y rápida.
+        Comparte tu experiencia con Giovanni Barber.
 
       </p>
 
     </div>
 
-  </section>
+    <div class="review-form">
 
-  <!-- =========================
+      <div class="form-group">
 
-       FOOTER
+        <label>Tu nombre</label>
 
-  ========================= -->
+        <input
 
-  <footer>
+          type="text"
+
+          id="reviewName"
+
+          placeholder="Escribe tu nombre"
+
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label>Tu calificación</label>
+
+        <div class="rating">
+
+          <span class="star" onclick="setRating(1)">★</span>
+
+          <span class="star" onclick="setRating(2)">★</span>
+
+          <span class="star" onclick="setRating(3)">★</span>
+
+          <span class="star" onclick="setRating(4)">★</span>
+
+          <span class="star" onclick="setRating(5)">★</span>
+
+        </div>
+
+      </div>
+
+      <div class="form-group">
+
+        <label>Tu opinión</label>
+
+        <textarea
+
+          id="reviewText"
+
+          rows="5"
+
+          placeholder="Cuéntanos qué te pareció..."
+
+        ></textarea>
+
+      </div>
+
+      <button
+
+        class="btn btn-main"
+
+        onclick="guardarOpinion()"
+
+      >
+
+        ⭐ Publicar opinión
+
+      </button>
+
+    </div>
+
+    <div id="reviewList" class="review-list"></div>
+
+  </div>
+
+</section>
+
+<!-- CONOCEME -->
+
+<section class="about" id="conoceme">
+
+  <div class="about-box">
+
+    <div class="section-title">
+
+      <span>SOBRE MÍ</span>
+
+      <h2>Conóceme</h2>
+
+    </div>
 
     <p>
 
-      <strong>Giovanni Barber</strong>
+      Soy Giovanni, barbero apasionado por los cortes,
+
+      los detalles y por ayudar a cada cliente a encontrar
+
+      un estilo con el que se sienta cómodo y seguro.
 
     </p>
+
+    <br>
 
     <p>
 
-      Estilo que habla por ti.
+      Aquí no se trata solamente de cortar el cabello.
+
+      Se trata de crear un estilo que vaya contigo.
 
     </p>
 
-  </footer>
+  </div>
 
-  <!-- =========================
+</section>
 
-       JAVASCRIPT
+<!-- FOOTER -->
 
-  ========================= -->
+<footer>
 
-  <script>
+  <span class="logo">GIOVANNI BARBER</span>
 
-    /* =========================
+  <p>© 2026 Giovanni Barber. Todos los derechos reservados.</p>
 
-       RECOMENDADOR DE CORTE
+</footer>
 
-    ========================= */
+<!-- WHATSAPP -->
 
-    function recomendarCorte() {
+<a
 
-      const edad =
+  class="whatsapp"
 
-        document.getElementById("edad").value;
+  href="https://wa.me/5212851049691?text=Hola%20Giovanni%2C%20quiero%20agendar%20una%20cita."
 
-      const cabello =
+  target="_blank"
 
-        document.getElementById("cabello").value;
+>
 
-      const cara =
+  ☎
 
-        document.getElementById("cara").value;
+</a>
 
-      const preferencia =
+<script>
 
-        document.getElementById("preferencia").value;
+/* MENU */
 
-      const resultado =
+function toggleMenu(){
 
-        document.getElementById("resultadoIA");
+  document
 
-      const texto =
+    .getElementById("menu")
 
-        document.getElementById("textoIA");
+    .classList.toggle("show");
 
-      if (!edad || !cabello || !cara || !preferencia) {
+}
 
-        resultado.style.display = "block";
+/* FOTO */
 
-        texto.innerHTML =
+function mostrarFoto(event){
 
-          "Completa todas las opciones para poder recomendarte un corte.";
+  const file = event.target.files[0];
 
-        return;
+  if(!file) return;
 
-      }
+  const preview = document.getElementById("preview");
 
-      let corte = "";
+  preview.src = URL.createObjectURL(file);
 
-      if (cara === "ovalada") {
+  preview.style.display = "block";
 
-        corte =
+}
 
-          "un taper fade o un crop texturizado";
+/* RECOMENDACIÓN */
 
-      }
+function recomendar(){
 
-      else if (cara === "redonda") {
+  const edad = document.getElementById("edad").value;
 
-        corte =
+  const cabello = document.getElementById("cabello").value;
 
-          "un mid fade con volumen arriba";
+  const cara = document.getElementById("cara").value;
 
-      }
+  const estilo = document.getElementById("estilo").value;
 
-      else if (cara === "cuadrada") {
+  const box = document.getElementById("recommendation");
 
-        corte =
+  const text = document.getElementById("recommendationText");
 
-          "un low fade o un corte clásico texturizado";
+  if(!edad || !cabello || !cara || !estilo){
 
-      }
+    alert("Completa las opciones para recibir tu recomendación.");
 
-      else if (cara === "alargada") {
+    return;
 
-        corte =
+  }
 
-          "un taper con textura y volumen moderado";
+  let corte = "Low Fade";
 
-      }
+  if(estilo === "Mid fade"){
 
-      else if (cara === "corazon") {
+    corte = "Mid Fade";
 
-        corte =
+  }
 
-          "un taper fade con textura arriba";
+  if(estilo === "High fade"){
 
-      }
+    corte = "High Fade";
 
-      if (preferencia === "clasico") {
+  }
 
-        corte =
+  if(estilo === "Clásico"){
 
-          "un corte clásico con taper y acabado limpio";
+    corte = "Taper clásico";
 
-      }
+  }
 
-      else if (preferencia === "moderno") {
+  if(estilo === "Moderno"){
 
-        corte =
+    corte = "Low Fade moderno";
 
-          "un taper fade moderno con textura";
+  }
 
-      }
+  if(cabello === "Rizado"){
 
-      else if (preferencia === "degradado") {
+    corte = "Fade para cabello rizado";
 
-        corte =
+  }
 
-          "un fade bien definido con textura arriba";
+  if(cabello === "Ondulado"){
 
-      }
+    corte = "Mid Fade con textura";
 
-      else if (preferencia === "atrevido") {
+  }
 
-        corte =
+  text.innerHTML =
 
-          "un burst fade o un estilo texturizado más atrevido";
+    "Por tus características, una buena opción para probar sería " +
 
-      }
+    "<strong>" + corte + "</strong>. " +
 
-      resultado.style.display = "block";
+    "Cuando vengas a la barbería, Giovanni puede revisar tu cabello " +
 
-      texto.innerHTML =
+    "y ajustar el corte para que quede bien con tu estilo.";
 
-        "Por tus características, te recomiendo <strong>"
+  box.style.display = "block";
 
-        + corte
+}
 
-        + "</strong>. Tu tipo de cabello "
+/* OPINIONES */
 
-        + cabello
+let rating = 0;
 
-        + " puede adaptarse muy bien a este estilo. "
+function setRating(number){
 
-        + "Cuando vengas a la barbería podemos ajustar "
+  rating = number;
 
-        + "el corte a tu gusto.";
+  const stars = document.querySelectorAll(".star");
+
+  stars.forEach((star,index)=>{
+
+    if(index < number){
+
+      star.classList.add("active");
+
+    }else{
+
+      star.classList.remove("active");
 
     }
 
-    /* =========================
+  });
 
-       AGENDA → WHATSAPP
+}
 
-    ========================= */
+function guardarOpinion(){
 
-    document
+  const name =
 
-      .getElementById("citaForm")
+    document.getElementById("reviewName").value.trim();
 
-      .addEventListener("submit", function(event) {
+  const text =
 
-        event.preventDefault();
+    document.getElementById("reviewText").value.trim();
 
-        const nombre =
+  if(!name || !text || rating === 0){
 
-          document.getElementById("nombre").value;
+    alert("Escribe tu nombre, opinión y selecciona las estrellas.");
 
-        const telefono =
+    return;
 
-          document.getElementById("telefono").value;
+  }
 
-        const fecha =
+  const reviews =
 
-          document.getElementById("fecha").value;
+    JSON.parse(localStorage.getItem("giovanniReviews") || "[]");
 
-        const hora =
+  reviews.unshift({
 
-          document.getElementById("hora").value;
+    name:name,
 
-        const servicio =
+    text:text,
 
-          document.getElementById("servicio").value;
+    rating:rating
 
-        const mensaje =
+  });
 
-          "Hola Giovanni Barber 👋\n\n"
+  localStorage.setItem(
 
-          + "Quiero solicitar una cita.\n\n"
+    "giovanniReviews",
 
-          + "👤 Nombre: " + nombre + "\n"
+    JSON.stringify(reviews)
 
-          + "📱 Teléfono: " + telefono + "\n"
+  );
 
-          + "📅 Fecha: " + fecha + "\n"
+  document.getElementById("reviewName").value = "";
 
-          + "🕐 Hora: " + hora + "\n"
+  document.getElementById("reviewText").value = "";
 
-          + "💈 Servicio: " + servicio;
+  rating = 0;
 
-        const numeroWhatsApp =
+  document.querySelectorAll(".star")
 
-          "522851049691";
+    .forEach(star => star.classList.remove("active"));
 
-        const url =
+  mostrarOpiniones();
 
-          "https://wa.me/"
+}
 
-          + numeroWhatsApp
+function mostrarOpiniones(){
 
-          + "?text="
+  const reviews =
 
-          + encodeURIComponent(mensaje);
+    JSON.parse(localStorage.getItem("giovanniReviews") || "[]");
 
-        window.location.href = url;
+  const list =
 
-      });
+    document.getElementById("reviewList");
 
-    /* =========================
+  list.innerHTML = "";
 
-       NO PERMITIR FECHAS PASADAS
+  reviews.forEach(review=>{
 
-    ========================= */
+    const div = document.createElement("div");
 
-    const fechaInput =
+    div.className = "review";
 
-      document.getElementById("fecha");
+    div.innerHTML = `
 
-    const hoy =
+      <strong>${escapeHTML(review.name)}</strong>
 
-      new Date().toISOString().split("T")[0];
+      <div class="stars">
 
-    fechaInput.min = hoy;
+        ${"★".repeat(review.rating)}
 
-  </script>
+        ${"☆".repeat(5-review.rating)}
+
+      </div>
+
+      <p>${escapeHTML(review.text)}</p>
+
+    `;
+
+    list.appendChild(div);
+
+  });
+
+}
+
+function escapeHTML(text){
+
+  const div = document.createElement("div");
+
+  div.textContent = text;
+
+  return div.innerHTML;
+
+}
+
+mostrarOpiniones();
+
+</script>
 
 </body>
 
