@@ -206,7 +206,21 @@ nav{
 
   font-weight:900;
 
-  background:linear-gradient(90deg,#fff,var(--dorado),var(--naranja),var(--rojo));
+  background:
+
+    linear-gradient(
+
+      90deg,
+
+      #fff,
+
+      var(--dorado),
+
+      var(--naranja),
+
+      var(--rojo)
+
+    );
 
   -webkit-background-clip:text;
 
@@ -352,7 +366,17 @@ section{
 
   background:
 
-    linear-gradient(135deg,#151515,#211711,#151515);
+    linear-gradient(
+
+      135deg,
+
+      #151515,
+
+      #211711,
+
+      #151515
+
+    );
 
 }
 
@@ -536,13 +560,25 @@ textarea:focus{
 
 }
 
-/* AGENDAR */
+/* =========================
+
+   AGENDAR
+
+========================= */
 
 .booking{
 
   background:
 
-    radial-gradient(circle at 80% 30%,rgba(255,122,24,.18),transparent 30%),
+    radial-gradient(
+
+      circle at 80% 30%,
+
+      rgba(255,122,24,.18),
+
+      transparent 30%
+
+    ),
 
     #0d0d0d;
 
@@ -581,6 +617,312 @@ textarea:focus{
   line-height:1.6;
 
   margin-bottom:25px;
+
+}
+
+.booking-form{
+
+  text-align:left;
+
+}
+
+.booking-form .campo{
+
+  margin-bottom:18px;
+
+}
+
+.booking-form textarea{
+
+  resize:vertical;
+
+}
+
+.booking-form button{
+
+  width:100%;
+
+  margin-top:10px;
+
+}
+
+/* =========================
+
+   AGENDA PRIVADA
+
+========================= */
+
+.agenda{
+
+  background:
+
+    radial-gradient(
+
+      circle at 20% 20%,
+
+      rgba(246,196,83,.12),
+
+      transparent 30%
+
+    ),
+
+    #0b0b0b;
+
+}
+
+.agenda-box{
+
+  max-width:900px;
+
+  margin:auto;
+
+  background:#151515;
+
+  border:1px solid #333;
+
+  border-radius:28px;
+
+  padding:30px;
+
+}
+
+.agenda-login{
+
+  max-width:400px;
+
+  margin:auto;
+
+  text-align:center;
+
+}
+
+.agenda-login .candado{
+
+  font-size:50px;
+
+  margin-bottom:15px;
+
+}
+
+.agenda-login h3{
+
+  font-size:30px;
+
+  margin-bottom:10px;
+
+}
+
+.agenda-login p{
+
+  color:#aaa;
+
+  margin-bottom:20px;
+
+}
+
+.pin{
+
+  text-align:center;
+
+  font-size:22px;
+
+  letter-spacing:8px;
+
+}
+
+.agenda-panel{
+
+  display:none;
+
+}
+
+.agenda-header{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:15px;
+
+  flex-wrap:wrap;
+
+  margin-bottom:25px;
+
+}
+
+.agenda-header h3{
+
+  font-size:30px;
+
+}
+
+.btn-small{
+
+  padding:10px 15px;
+
+  border-radius:10px;
+
+  background:#292929;
+
+  color:white;
+
+  border:1px solid #444;
+
+  cursor:pointer;
+
+}
+
+.agenda-form{
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:15px;
+
+  background:#101010;
+
+  padding:20px;
+
+  border-radius:20px;
+
+}
+
+.agenda-form .full{
+
+  grid-column:1/-1;
+
+}
+
+.agenda-form button{
+
+  grid-column:1/-1;
+
+}
+
+.citas-titulo{
+
+  color:var(--dorado);
+
+  margin-top:30px;
+
+  margin-bottom:10px;
+
+}
+
+.cita{
+
+  background:linear-gradient(145deg,#202020,#151515);
+
+  border-left:5px solid var(--dorado);
+
+  border-radius:16px;
+
+  padding:18px;
+
+  margin-top:13px;
+
+}
+
+.cita-top{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:10px;
+
+  flex-wrap:wrap;
+
+}
+
+.cita h4{
+
+  font-size:21px;
+
+}
+
+.cita p{
+
+  color:#bbb;
+
+  margin-top:7px;
+
+}
+
+.confirmada{
+
+  color:#63e68a;
+
+  font-weight:bold;
+
+}
+
+.pendiente{
+
+  color:#ffd166;
+
+  font-weight:bold;
+
+}
+
+.cita-buttons{
+
+  margin-top:15px;
+
+  display:flex;
+
+  gap:8px;
+
+  flex-wrap:wrap;
+
+}
+
+.cita-buttons button{
+
+  padding:9px 13px;
+
+  border-radius:9px;
+
+  border:none;
+
+  cursor:pointer;
+
+  font-weight:bold;
+
+}
+
+.editar{
+
+  background:#3b4a52;
+
+  color:white;
+
+}
+
+.eliminar{
+
+  background:#9e3028;
+
+  color:white;
+
+}
+
+.sin-citas{
+
+  text-align:center;
+
+  color:#777;
+
+  background:#101010;
+
+  padding:25px;
+
+  border-radius:15px;
+
+  margin-top:15px;
 
 }
 
@@ -684,7 +1026,15 @@ textarea:focus{
 
   background:
 
-    linear-gradient(135deg,#16120e,#090909);
+    linear-gradient(
+
+      135deg,
+
+      #16120e,
+
+      #090909
+
+    );
 
 }
 
@@ -820,9 +1170,19 @@ footer p{
 
   .form-grid,
 
-  .cards{
+  .cards,
+
+  .agenda-form{
 
     grid-template-columns:1fr;
+
+  }
+
+  .agenda-form .full,
+
+  .agenda-form button{
+
+    grid-column:auto;
 
   }
 
@@ -848,7 +1208,9 @@ footer p{
 
   .booking-box,
 
-  .review-form{
+  .review-form,
+
+  .agenda-box{
 
     padding:22px;
 
@@ -862,6 +1224,12 @@ footer p{
 
   }
 
+  .agenda-header h3{
+
+    font-size:25px;
+
+  }
+
 }
 
 </style>
@@ -870,27 +1238,65 @@ footer p{
 
 <body>
 
-<!-- NAVBAR -->
+<!-- =========================
+
+     NAVBAR
+
+========================= -->
 
 <nav>
 
   <div class="nav-container">
 
-    <div class="logo">GIOVANNI BARBER</div>
+    <div class="logo">
 
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+      GIOVANNI BARBER
+
+    </div>
+
+    <div class="menu-btn" onclick="toggleMenu()">
+
+      ☰
+
+    </div>
 
     <ul class="menu" id="menu">
 
-      <li><a href="#inicio">Inicio</a></li>
+      <li>
 
-      <li><a href="#ia">Elige tu corte</a></li>
+        <a href="#inicio">Inicio</a>
 
-      <li><a href="#agendar">Agendar</a></li>
+      </li>
 
-      <li><a href="#opiniones">Opiniones</a></li>
+      <li>
 
-      <li><a href="#conoceme">Conóceme</a></li>
+        <a href="#ia">Elige tu corte</a>
+
+      </li>
+
+      <li>
+
+        <a href="#agendar">Agendar</a>
+
+      </li>
+
+      <li>
+
+        <a href="#agenda">Mi agenda</a>
+
+      </li>
+
+      <li>
+
+        <a href="#opiniones">Opiniones</a>
+
+      </li>
+
+      <li>
+
+        <a href="#conoceme">Conóceme</a>
+
+      </li>
 
     </ul>
 
@@ -898,15 +1304,27 @@ footer p{
 
 </nav>
 
-<!-- INICIO -->
+<!-- =========================
+
+     INICIO
+
+========================= -->
 
 <section class="hero" id="inicio">
 
   <div class="hero-content">
 
-    <div class="badge">✂️ BARBERÍA • ESTILO • PERSONALIDAD</div>
+    <div class="badge">
 
-    <h1>GIOVANNI<br>BARBER</h1>
+      ✂️ BARBERÍA • ESTILO • PERSONALIDAD
+
+    </div>
+
+    <h1>
+
+      GIOVANNI<br>BARBER
+
+    </h1>
 
     <p>
 
@@ -920,13 +1338,25 @@ footer p{
 
     <div class="buttons">
 
-      <a href="#ia" class="btn btn-main">
+      <a
+
+        href="#ia"
+
+        class="btn btn-main"
+
+      >
 
         ✂️ Elegir mi corte
 
       </a>
 
-      <a href="#agendar" class="btn btn-outline">
+      <a
+
+        href="#agendar"
+
+        class="btn btn-outline"
+
+      >
 
         📅 Agendar cita
 
@@ -938,21 +1368,41 @@ footer p{
 
 </section>
 
-<!-- IA -->
+<!-- =========================
 
-<section class="ai-section" id="ia">
+     ELIGE TU CORTE
+
+========================= -->
+
+<section
+
+  class="ai-section"
+
+  id="ia"
+
+>
 
   <div class="container">
 
     <div class="section-title">
 
-      <span>ESTILO PERSONALIZADO</span>
+      <span>
 
-      <h2>Elige tu corte</h2>
+        ESTILO PERSONALIZADO
+
+      </span>
+
+      <h2>
+
+        Elige tu corte
+
+      </h2>
 
       <p>
 
-        Dime un poco sobre ti y te damos una recomendación.
+        Dime un poco sobre ti y te damos
+
+        una recomendación.
 
       </p>
 
@@ -964,21 +1414,49 @@ footer p{
 
         <div>
 
-          <label>Edad</label>
+          <label>
+
+            Edad
+
+          </label>
 
           <select id="edad">
 
-            <option value="">Selecciona</option>
+            <option value="">
 
-            <option>13 - 17</option>
+              Selecciona
 
-            <option>18 - 25</option>
+            </option>
 
-            <option>26 - 35</option>
+            <option>
 
-            <option>36 - 50</option>
+              13 - 17
 
-            <option>50+</option>
+            </option>
+
+            <option>
+
+              18 - 25
+
+            </option>
+
+            <option>
+
+              26 - 35
+
+            </option>
+
+            <option>
+
+              36 - 50
+
+            </option>
+
+            <option>
+
+              50+
+
+            </option>
 
           </select>
 
@@ -986,21 +1464,49 @@ footer p{
 
         <div>
 
-          <label>Tipo de cabello</label>
+          <label>
+
+            Tipo de cabello
+
+          </label>
 
           <select id="cabello">
 
-            <option value="">Selecciona</option>
+            <option value="">
 
-            <option>Lacio</option>
+              Selecciona
 
-            <option>Ondulado</option>
+            </option>
 
-            <option>Rizado</option>
+            <option>
 
-            <option>Grueso</option>
+              Lacio
 
-            <option>Delgado</option>
+            </option>
+
+            <option>
+
+              Ondulado
+
+            </option>
+
+            <option>
+
+              Rizado
+
+            </option>
+
+            <option>
+
+              Grueso
+
+            </option>
+
+            <option>
+
+              Delgado
+
+            </option>
 
           </select>
 
@@ -1008,21 +1514,49 @@ footer p{
 
         <div>
 
-          <label>Forma de cara</label>
+          <label>
+
+            Forma de cara
+
+          </label>
 
           <select id="cara">
 
-            <option value="">Selecciona</option>
+            <option value="">
 
-            <option>Ovalada</option>
+              Selecciona
 
-            <option>Redonda</option>
+            </option>
 
-            <option>Cuadrada</option>
+            <option>
 
-            <option>Alargada</option>
+              Ovalada
 
-            <option>No sé</option>
+            </option>
+
+            <option>
+
+              Redonda
+
+            </option>
+
+            <option>
+
+              Cuadrada
+
+            </option>
+
+            <option>
+
+              Alargada
+
+            </option>
+
+            <option>
+
+              No sé
+
+            </option>
 
           </select>
 
@@ -1030,23 +1564,55 @@ footer p{
 
         <div>
 
-          <label>¿Qué estilo buscas?</label>
+          <label>
+
+            ¿Qué estilo buscas?
+
+          </label>
 
           <select id="estilo">
 
-            <option value="">Selecciona</option>
+            <option value="">
 
-            <option>Clásico</option>
+              Selecciona
 
-            <option>Moderno</option>
+            </option>
 
-            <option>Fade</option>
+            <option>
 
-            <option>Low fade</option>
+              Clásico
 
-            <option>Mid fade</option>
+            </option>
 
-            <option>High fade</option>
+            <option>
+
+              Moderno
+
+            </option>
+
+            <option>
+
+              Fade
+
+            </option>
+
+            <option>
+
+              Low fade
+
+            </option>
+
+            <option>
+
+              Mid fade
+
+            </option>
+
+            <option>
+
+              High fade
+
+            </option>
 
           </select>
 
@@ -1056,7 +1622,11 @@ footer p{
 
       <div class="photo-box">
 
-        <label>📷 Agrega una foto (opcional)</label>
+        <label>
+
+          📷 Agrega una foto (opcional)
+
+        </label>
 
         <input
 
@@ -1070,13 +1640,25 @@ footer p{
 
         >
 
-        <img id="preview" class="preview">
+        <img
+
+          id="preview"
+
+          class="preview"
+
+        >
 
       </div>
 
       <div class="buttons">
 
-        <button class="btn btn-main" onclick="recomendar()">
+        <button
+
+          class="btn btn-main"
+
+          onclick="recomendar()"
+
+        >
 
           🤖 Recomendarme un corte
 
@@ -1084,9 +1666,19 @@ footer p{
 
       </div>
 
-      <div id="recommendation" class="recommendation">
+      <div
 
-        <h3>🔥 Tu recomendación</h3>
+        id="recommendation"
+
+        class="recommendation"
+
+      >
+
+        <h3>
+
+          🔥 Tu recomendación
+
+        </h3>
 
         <p id="recommendationText"></p>
 
@@ -1098,7 +1690,11 @@ footer p{
 
 </section>
 
-<!-- SERVICIOS -->
+<!-- =========================
+
+     SERVICIOS
+
+========================= -->
 
 <section>
 
@@ -1106,9 +1702,17 @@ footer p{
 
     <div class="section-title">
 
-      <span>LO QUE HACEMOS</span>
+      <span>
 
-      <h2>Tu estilo, tu manera</h2>
+        LO QUE HACEMOS
+
+      </span>
+
+      <h2>
+
+        Tu estilo, tu manera
+
+      </h2>
 
     </div>
 
@@ -1116,15 +1720,23 @@ footer p{
 
       <div class="card">
 
-        <div class="icon">✂️</div>
+        <div class="icon">
 
-        <h3>Cortes modernos</h3>
+          ✂️
+
+        </div>
+
+        <h3>
+
+          Cortes modernos
+
+        </h3>
 
         <p>
 
-          Cortes actuales adaptados a tu estilo
+          Cortes actuales adaptados a
 
-          y personalidad.
+          tu estilo y personalidad.
 
         </p>
 
@@ -1132,15 +1744,23 @@ footer p{
 
       <div class="card">
 
-        <div class="icon">🔥</div>
+        <div class="icon">
 
-        <h3>Fade & degradados</h3>
+          🔥
+
+        </div>
+
+        <h3>
+
+          Fade & degradados
+
+        </h3>
 
         <p>
 
-          Degradados limpios y definidos para
+          Degradados limpios y definidos
 
-          un acabado moderno.
+          para un acabado moderno.
 
         </p>
 
@@ -1148,15 +1768,23 @@ footer p{
 
       <div class="card">
 
-        <div class="icon">💈</div>
+        <div class="icon">
 
-        <h3>Estilo personalizado</h3>
+          💈
+
+        </div>
+
+        <h3>
+
+          Estilo personalizado
+
+        </h3>
 
         <p>
 
-          Buscamos que tu corte vaya contigo
+          Buscamos que tu corte vaya
 
-          y con la imagen que quieres proyectar.
+          contigo y con tu personalidad.
 
         </p>
 
@@ -1168,55 +1796,549 @@ footer p{
 
 </section>
 
-<!-- AGENDAR -->
+<!-- =========================
 
-<section class="booking" id="agendar">
+     AGENDAR CON FORMULARIO
+
+========================= -->
+
+<section
+
+  class="booking"
+
+  id="agendar"
+
+>
 
   <div class="booking-box">
 
-    <h2>¿Listo para tu próximo corte?</h2>
+    <h2>
+
+      📅 Agenda tu cita
+
+    </h2>
 
     <p>
 
-      Agenda tu cita directamente por WhatsApp.
+      Llena el formulario y envíame
 
-      Te responderemos para confirmar tu horario.
+      tu solicitud por WhatsApp.
+
+      Yo te confirmaré tu horario.
 
     </p>
 
-    <a
+    <div class="booking-form">
 
-      class="btn btn-main"
+      <div class="campo">
 
-      href="https://wa.me/5212851049691?text=Hola%20Giovanni%2C%20quiero%20agendar%20una%20cita."
+        <label>
 
-      target="_blank"
+          👤 Tu nombre
 
-    >
+        </label>
 
-      📲 Agendar por WhatsApp
+        <input
 
-    </a>
+          type="text"
+
+          id="clienteNombre"
+
+          placeholder="Escribe tu nombre"
+
+        >
+
+      </div>
+
+      <div class="campo">
+
+        <label>
+
+          📅 Día de la cita
+
+        </label>
+
+        <input
+
+          type="date"
+
+          id="clienteFecha"
+
+        >
+
+      </div>
+
+      <div class="campo">
+
+        <label>
+
+          🕐 Hora
+
+        </label>
+
+        <input
+
+          type="time"
+
+          id="clienteHora"
+
+        >
+
+      </div>
+
+      <div class="campo">
+
+        <label>
+
+          ✂️ Servicio
+
+        </label>
+
+        <select id="clienteServicio">
+
+          <option value="">
+
+            Selecciona un servicio
+
+          </option>
+
+          <option value="Corte">
+
+            Corte
+
+          </option>
+
+          <option value="Corte + barba">
+
+            Corte + barba
+
+          </option>
+
+          <option value="Barba">
+
+            Barba
+
+          </option>
+
+          <option value="Diseño">
+
+            Diseño
+
+          </option>
+
+        </select>
+
+      </div>
+
+      <div class="campo">
+
+        <label>
+
+          📱 Tu teléfono
+
+        </label>
+
+        <input
+
+          type="tel"
+
+          id="clienteTelefono"
+
+          placeholder="Tu número"
+
+        >
+
+      </div>
+
+      <div class="campo">
+
+        <label>
+
+          📝 Mensaje adicional
+
+        </label>
+
+        <textarea
+
+          id="clienteMensaje"
+
+          rows="4"
+
+          placeholder="¿Tienes alguna petición especial?"
+
+        ></textarea>
+
+      </div>
+
+      <button
+
+        class="btn btn-main"
+
+        onclick="enviarCitaWhatsApp()"
+
+      >
+
+        📲 ENVIAR CITA POR WHATSAPP
+
+      </button>
+
+    </div>
 
   </div>
 
 </section>
 
-<!-- OPINIONES -->
+<!-- =========================
 
-<section class="reviews" id="opiniones">
+     MI AGENDA PRIVADA
+
+========================= -->
+
+<section
+
+  class="agenda"
+
+  id="agenda"
+
+>
 
   <div class="container">
 
     <div class="section-title">
 
-      <span>CLIENTES</span>
+      <span>
 
-      <h2>Opiniones</h2>
+        SOLO PARA GIOVANNI
+
+      </span>
+
+      <h2>
+
+        📅 Mi agenda
+
+      </h2>
 
       <p>
 
-        Comparte tu experiencia con Giovanni Barber.
+        Aquí puedes guardar las citas
+
+        que ya confirmaste.
+
+      </p>
+
+    </div>
+
+    <div class="agenda-box">
+
+      <!-- LOGIN -->
+
+      <div
+
+        class="agenda-login"
+
+        id="agendaLogin"
+
+      >
+
+        <div class="candado">
+
+          🔐
+
+        </div>
+
+        <h3>
+
+          Agenda privada
+
+        </h3>
+
+        <p>
+
+          Introduce tu PIN para entrar.
+
+        </p>
+
+        <input
+
+          type="password"
+
+          id="agendaPin"
+
+          class="pin"
+
+          maxlength="4"
+
+          inputmode="numeric"
+
+          placeholder="••••"
+
+        >
+
+        <button
+
+          class="btn btn-main"
+
+          style="width:100%;margin-top:15px;"
+
+          onclick="entrarAgenda()"
+
+        >
+
+          🔓 Entrar
+
+        </button>
+
+      </div>
+
+      <!-- PANEL -->
+
+      <div
+
+        class="agenda-panel"
+
+        id="agendaPanel"
+
+      >
+
+        <div class="agenda-header">
+
+          <h3>
+
+            📋 Mis citas
+
+          </h3>
+
+          <button
+
+            class="btn-small"
+
+            onclick="cerrarAgenda()"
+
+          >
+
+            🔒 Cerrar
+
+          </button>
+
+        </div>
+
+        <label>
+
+          📅 Selecciona el día
+
+        </label>
+
+        <input
+
+          type="date"
+
+          id="agendaFecha"
+
+          onchange="mostrarCitas()"
+
+          style="margin-bottom:20px;"
+
+        >
+
+        <!-- FORMULARIO INTERNO -->
+
+        <div class="agenda-form">
+
+          <div>
+
+            <label>
+
+              🕐 Hora
+
+            </label>
+
+            <input
+
+              type="time"
+
+              id="citaHora"
+
+            >
+
+          </div>
+
+          <div>
+
+            <label>
+
+              👤 Cliente
+
+            </label>
+
+            <input
+
+              type="text"
+
+              id="citaNombre"
+
+              placeholder="Nombre"
+
+            >
+
+          </div>
+
+          <div>
+
+            <label>
+
+              📱 Teléfono
+
+            </label>
+
+            <input
+
+              type="tel"
+
+              id="citaTelefono"
+
+              placeholder="Teléfono"
+
+            >
+
+          </div>
+
+          <div>
+
+            <label>
+
+              ✂️ Servicio
+
+            </label>
+
+            <select id="citaServicio">
+
+              <option value="Corte">
+
+                Corte
+
+              </option>
+
+              <option value="Corte + barba">
+
+                Corte + barba
+
+              </option>
+
+              <option value="Barba">
+
+                Barba
+
+              </option>
+
+              <option value="Diseño">
+
+                Diseño
+
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="full">
+
+            <label>
+
+              📌 Estado
+
+            </label>
+
+            <select id="citaEstado">
+
+              <option value="Confirmada">
+
+                ✅ Confirmada
+
+              </option>
+
+              <option value="Pendiente">
+
+                ⏳ Pendiente
+
+              </option>
+
+            </select>
+
+          </div>
+
+          <button
+
+            class="btn btn-main"
+
+            id="guardarCitaBtn"
+
+            onclick="guardarCita()"
+
+          >
+
+            ➕ Guardar cita
+
+          </button>
+
+        </div>
+
+        <h3 class="citas-titulo">
+
+          Citas del día:
+
+          <span id="contadorCitas">
+
+            0
+
+          </span>
+
+        </h3>
+
+        <div id="listaCitas"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+
+     OPINIONES
+
+========================= -->
+
+<section
+
+  class="reviews"
+
+  id="opiniones"
+
+>
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>
+
+        CLIENTES
+
+      </span>
+
+      <h2>
+
+        Opiniones
+
+      </h2>
+
+      <p>
+
+        Comparte tu experiencia con
+
+        Giovanni Barber.
 
       </p>
 
@@ -1226,7 +2348,11 @@ footer p{
 
       <div class="form-group">
 
-        <label>Tu nombre</label>
+        <label>
+
+          Tu nombre
+
+        </label>
 
         <input
 
@@ -1242,19 +2368,73 @@ footer p{
 
       <div class="form-group">
 
-        <label>Tu calificación</label>
+        <label>
+
+          Tu calificación
+
+        </label>
 
         <div class="rating">
 
-          <span class="star" onclick="setRating(1)">★</span>
+          <span
 
-          <span class="star" onclick="setRating(2)">★</span>
+            class="star"
 
-          <span class="star" onclick="setRating(3)">★</span>
+            onclick="setRating(1)"
 
-          <span class="star" onclick="setRating(4)">★</span>
+          >
 
-          <span class="star" onclick="setRating(5)">★</span>
+            ★
+
+          </span>
+
+          <span
+
+            class="star"
+
+            onclick="setRating(2)"
+
+          >
+
+            ★
+
+          </span>
+
+          <span
+
+            class="star"
+
+            onclick="setRating(3)"
+
+          >
+
+            ★
+
+          </span>
+
+          <span
+
+            class="star"
+
+            onclick="setRating(4)"
+
+          >
+
+            ★
+
+          </span>
+
+          <span
+
+            class="star"
+
+            onclick="setRating(5)"
+
+          >
+
+            ★
+
+          </span>
 
         </div>
 
@@ -1262,7 +2442,11 @@ footer p{
 
       <div class="form-group">
 
-        <label>Tu opinión</label>
+        <label>
+
+          Tu opinión
+
+        </label>
 
         <textarea
 
@@ -1290,33 +2474,59 @@ footer p{
 
     </div>
 
-    <div id="reviewList" class="review-list"></div>
+    <div
+
+      id="reviewList"
+
+      class="review-list"
+
+    ></div>
 
   </div>
 
 </section>
 
-<!-- CONOCEME -->
+<!-- =========================
 
-<section class="about" id="conoceme">
+     CONOCEME
+
+========================= -->
+
+<section
+
+  class="about"
+
+  id="conoceme"
+
+>
 
   <div class="about-box">
 
     <div class="section-title">
 
-      <span>SOBRE MÍ</span>
+      <span>
 
-      <h2>Conóceme</h2>
+        SOBRE MÍ
+
+      </span>
+
+      <h2>
+
+        Conóceme
+
+      </h2>
 
     </div>
 
     <p>
 
-      Soy Giovanni, barbero apasionado por los cortes,
+      Soy Giovanni, barbero apasionado
 
-      los detalles y por ayudar a cada cliente a encontrar
+      por los cortes, los detalles y por
 
-      un estilo con el que se sienta cómodo y seguro.
+      ayudar a cada cliente a encontrar
+
+      un estilo con el que se sienta cómodo.
 
     </p>
 
@@ -1324,9 +2534,11 @@ footer p{
 
     <p>
 
-      Aquí no se trata solamente de cortar el cabello.
+      Aquí no se trata solamente de cortar
 
-      Se trata de crear un estilo que vaya contigo.
+      el cabello. Se trata de crear un estilo
+
+      que vaya contigo.
 
     </p>
 
@@ -1338,9 +2550,19 @@ footer p{
 
 <footer>
 
-  <span class="logo">GIOVANNI BARBER</span>
+  <span class="logo">
 
-  <p>© 2026 Giovanni Barber. Todos los derechos reservados.</p>
+    GIOVANNI BARBER
+
+  </span>
+
+  <p>
+
+    © 2026 Giovanni Barber.
+
+    Todos los derechos reservados.
+
+  </p>
 
 </footer>
 
@@ -1362,7 +2584,11 @@ footer p{
 
 <script>
 
-/* MENU */
+/* =========================
+
+   MENU
+
+========================= */
 
 function toggleMenu(){
 
@@ -1374,47 +2600,91 @@ function toggleMenu(){
 
 }
 
-/* FOTO */
+/* =========================
+
+   FOTO
+
+========================= */
 
 function mostrarFoto(event){
 
-  const file = event.target.files[0];
+  const file =
+
+    event.target.files[0];
 
   if(!file) return;
 
-  const preview = document.getElementById("preview");
+  const preview =
 
-  preview.src = URL.createObjectURL(file);
+    document.getElementById("preview");
 
-  preview.style.display = "block";
+  preview.src =
+
+    URL.createObjectURL(file);
+
+  preview.style.display =
+
+    "block";
 
 }
 
-/* RECOMENDACIÓN */
+/* =========================
+
+   RECOMENDACIÓN
+
+========================= */
 
 function recomendar(){
 
-  const edad = document.getElementById("edad").value;
+  const edad =
 
-  const cabello = document.getElementById("cabello").value;
+    document.getElementById("edad").value;
 
-  const cara = document.getElementById("cara").value;
+  const cabello =
 
-  const estilo = document.getElementById("estilo").value;
+    document.getElementById("cabello").value;
 
-  const box = document.getElementById("recommendation");
+  const cara =
 
-  const text = document.getElementById("recommendationText");
+    document.getElementById("cara").value;
 
-  if(!edad || !cabello || !cara || !estilo){
+  const estilo =
 
-    alert("Completa las opciones para recibir tu recomendación.");
+    document.getElementById("estilo").value;
+
+  const box =
+
+    document.getElementById("recommendation");
+
+  const text =
+
+    document.getElementById("recommendationText");
+
+  if(
+
+    !edad ||
+
+    !cabello ||
+
+    !cara ||
+
+    !estilo
+
+  ){
+
+    alert(
+
+      "Completa las opciones para recibir tu recomendación."
+
+    );
 
     return;
 
   }
 
-  let corte = "Low Fade";
+  let corte =
+
+    "Low Fade";
 
   if(estilo === "Mid fade"){
 
@@ -1456,17 +2726,197 @@ function recomendar(){
 
     "Por tus características, una buena opción para probar sería " +
 
-    "<strong>" + corte + "</strong>. " +
+    "<strong>" +
+
+    corte +
+
+    "</strong>. " +
 
     "Cuando vengas a la barbería, Giovanni puede revisar tu cabello " +
 
     "y ajustar el corte para que quede bien con tu estilo.";
 
-  box.style.display = "block";
+  box.style.display =
+
+    "block";
 
 }
 
-/* OPINIONES */
+/* =========================
+
+   WHATSAPP - CITA
+
+========================= */
+
+function enviarCitaWhatsApp(){
+
+  const nombre =
+
+    document
+
+      .getElementById("clienteNombre")
+
+      .value
+
+      .trim();
+
+  const fecha =
+
+    document
+
+      .getElementById("clienteFecha")
+
+      .value;
+
+  const hora =
+
+    document
+
+      .getElementById("clienteHora")
+
+      .value;
+
+  const servicio =
+
+    document
+
+      .getElementById("clienteServicio")
+
+      .value;
+
+  const telefono =
+
+    document
+
+      .getElementById("clienteTelefono")
+
+      .value
+
+      .trim();
+
+  const mensaje =
+
+    document
+
+      .getElementById("clienteMensaje")
+
+      .value
+
+      .trim();
+
+  if(
+
+    !nombre ||
+
+    !fecha ||
+
+    !hora ||
+
+    !servicio
+
+  ){
+
+    alert(
+
+      "⚠️ Completa tu nombre, fecha, hora y servicio."
+
+    );
+
+    return;
+
+  }
+
+  const fechaPartes =
+
+    fecha.split("-");
+
+  const fechaFormateada =
+
+    fechaPartes[2] +
+
+    "/" +
+
+    fechaPartes[1] +
+
+    "/" +
+
+    fechaPartes[0];
+
+  let texto =
+
+    "Hola Giovanni 👋\n\n" +
+
+    "Quiero agendar una cita. ✂️\n\n" +
+
+    "👤 Nombre: " +
+
+    nombre +
+
+    "\n📅 Fecha: " +
+
+    fechaFormateada +
+
+    "\n🕐 Hora: " +
+
+    hora +
+
+    "\n✂️ Servicio: " +
+
+    servicio;
+
+  if(telefono){
+
+    texto +=
+
+      "\n📱 Teléfono: " +
+
+      telefono;
+
+  }
+
+  if(mensaje){
+
+    texto +=
+
+      "\n📝 Mensaje: " +
+
+      mensaje;
+
+  }
+
+  texto +=
+
+    "\n\n¿Me confirmas si está disponible? 🙌";
+
+  const numero =
+
+    "5212851049691";
+
+  const url =
+
+    "https://wa.me/" +
+
+    numero +
+
+    "?text=" +
+
+    encodeURIComponent(texto);
+
+  window.open(
+
+    url,
+
+    "_blank"
+
+  );
+
+}
+
+/* =========================
+
+   OPINIONES
+
+========================= */
 
 let rating = 0;
 
@@ -1474,21 +2924,27 @@ function setRating(number){
 
   rating = number;
 
-  const stars = document.querySelectorAll(".star");
+  const stars =
 
-  stars.forEach((star,index)=>{
+    document.querySelectorAll(".star");
 
-    if(index < number){
+  stars.forEach(
 
-      star.classList.add("active");
+    (star,index)=>{
 
-    }else{
+      if(index < number){
 
-      star.classList.remove("active");
+        star.classList.add("active");
+
+      }else{
+
+        star.classList.remove("active");
+
+      }
 
     }
 
-  });
+  );
 
 }
 
@@ -1496,15 +2952,39 @@ function guardarOpinion(){
 
   const name =
 
-    document.getElementById("reviewName").value.trim();
+    document
+
+      .getElementById("reviewName")
+
+      .value
+
+      .trim();
 
   const text =
 
-    document.getElementById("reviewText").value.trim();
+    document
 
-  if(!name || !text || rating === 0){
+      .getElementById("reviewText")
 
-    alert("Escribe tu nombre, opinión y selecciona las estrellas.");
+      .value
+
+      .trim();
+
+  if(
+
+    !name ||
+
+    !text ||
+
+    rating === 0
+
+  ){
+
+    alert(
+
+      "Escribe tu nombre, opinión y selecciona las estrellas."
+
+    );
 
     return;
 
@@ -1512,7 +2992,15 @@ function guardarOpinion(){
 
   const reviews =
 
-    JSON.parse(localStorage.getItem("giovanniReviews") || "[]");
+    JSON.parse(
+
+      localStorage.getItem(
+
+        "giovanniReviews"
+
+      ) || "[]"
+
+    );
 
   reviews.unshift({
 
@@ -1532,15 +3020,31 @@ function guardarOpinion(){
 
   );
 
-  document.getElementById("reviewName").value = "";
+  document
 
-  document.getElementById("reviewText").value = "";
+    .getElementById("reviewName")
+
+    .value = "";
+
+  document
+
+    .getElementById("reviewText")
+
+    .value = "";
 
   rating = 0;
 
-  document.querySelectorAll(".star")
+  document
 
-    .forEach(star => star.classList.remove("active"));
+    .querySelectorAll(".star")
+
+    .forEach(
+
+      star =>
+
+        star.classList.remove("active")
+
+    );
 
   mostrarOpiniones();
 
@@ -1550,53 +3054,863 @@ function mostrarOpiniones(){
 
   const reviews =
 
-    JSON.parse(localStorage.getItem("giovanniReviews") || "[]");
+    JSON.parse(
+
+      localStorage.getItem(
+
+        "giovanniReviews"
+
+      ) || "[]"
+
+    );
 
   const list =
 
-    document.getElementById("reviewList");
+    document.getElementById(
+
+      "reviewList"
+
+    );
 
   list.innerHTML = "";
 
-  reviews.forEach(review=>{
+  reviews.forEach(
 
-    const div = document.createElement("div");
+    review=>{
 
-    div.className = "review";
+      const div =
 
-    div.innerHTML = `
+        document.createElement("div");
 
-      <strong>${escapeHTML(review.name)}</strong>
+      div.className =
 
-      <div class="stars">
+        "review";
 
-        ${"★".repeat(review.rating)}
+      div.innerHTML = `
 
-        ${"☆".repeat(5-review.rating)}
+        <strong>
 
-      </div>
+          ${escapeHTML(review.name)}
 
-      <p>${escapeHTML(review.text)}</p>
+        </strong>
 
-    `;
+        <div class="stars">
 
-    list.appendChild(div);
+          ${"★".repeat(review.rating)}
 
-  });
+          ${"☆".repeat(5-review.rating)}
+
+        </div>
+
+        <p>
+
+          ${escapeHTML(review.text)}
+
+        </p>
+
+      `;
+
+      list.appendChild(div);
+
+    }
+
+  );
 
 }
 
 function escapeHTML(text){
 
-  const div = document.createElement("div");
+  const div =
 
-  div.textContent = text;
+    document.createElement("div");
+
+  div.textContent =
+
+    text;
 
   return div.innerHTML;
 
 }
 
-mostrarOpiniones();
+/* =========================
+
+   AGENDA PRIVADA
+
+========================= */
+
+/*
+
+   TU PIN DE AGENDA
+
+   Puedes cambiar 1234
+
+   por otro PIN de 4 números.
+
+*/
+
+const PIN_AGENDA =
+
+  "1234";
+
+let citas =
+
+  JSON.parse(
+
+    localStorage.getItem(
+
+      "giovanniCitas"
+
+    ) || "[]"
+
+  );
+
+let citaEditando =
+
+  null;
+
+/* FECHA DE HOY */
+
+function obtenerFechaHoy(){
+
+  const hoy =
+
+    new Date();
+
+  const año =
+
+    hoy.getFullYear();
+
+  const mes =
+
+    String(
+
+      hoy.getMonth()+1
+
+    ).padStart(2,"0");
+
+  const dia =
+
+    String(
+
+      hoy.getDate()
+
+    ).padStart(2,"0");
+
+  return (
+
+    año +
+
+    "-" +
+
+    mes +
+
+    "-" +
+
+    dia
+
+  );
+
+}
+
+/* ENTRAR */
+
+function entrarAgenda(){
+
+  const pin =
+
+    document
+
+      .getElementById("agendaPin")
+
+      .value;
+
+  if(pin === PIN_AGENDA){
+
+    document
+
+      .getElementById("agendaLogin")
+
+      .style.display =
+
+      "none";
+
+    document
+
+      .getElementById("agendaPanel")
+
+      .style.display =
+
+      "block";
+
+    document
+
+      .getElementById("agendaPin")
+
+      .value = "";
+
+    document
+
+      .getElementById("agendaFecha")
+
+      .value =
+
+      obtenerFechaHoy();
+
+    mostrarCitas();
+
+  }else{
+
+    alert(
+
+      "❌ PIN incorrecto."
+
+    );
+
+  }
+
+}
+
+/* CERRAR */
+
+function cerrarAgenda(){
+
+  document
+
+    .getElementById("agendaPanel")
+
+    .style.display =
+
+    "none";
+
+  document
+
+    .getElementById("agendaLogin")
+
+    .style.display =
+
+    "block";
+
+}
+
+/* GUARDAR CITA */
+
+function guardarCita(){
+
+  const fecha =
+
+    document
+
+      .getElementById("agendaFecha")
+
+      .value;
+
+  const hora =
+
+    document
+
+      .getElementById("citaHora")
+
+      .value;
+
+  const nombre =
+
+    document
+
+      .getElementById("citaNombre")
+
+      .value
+
+      .trim();
+
+  const telefono =
+
+    document
+
+      .getElementById("citaTelefono")
+
+      .value
+
+      .trim();
+
+  const servicio =
+
+    document
+
+      .getElementById("citaServicio")
+
+      .value;
+
+  const estado =
+
+    document
+
+      .getElementById("citaEstado")
+
+      .value;
+
+  if(
+
+    !fecha ||
+
+    !hora ||
+
+    !nombre
+
+  ){
+
+    alert(
+
+      "⚠️ Escribe fecha, hora y nombre."
+
+    );
+
+    return;
+
+  }
+
+  /* EVITAR DOS CITAS A LA MISMA HORA */
+
+  const ocupado =
+
+    citas.some(
+
+      (cita,index)=>{
+
+        return (
+
+          index !== citaEditando &&
+
+          cita.fecha === fecha &&
+
+          cita.hora === hora
+
+        );
+
+      }
+
+    );
+
+  if(ocupado){
+
+    alert(
+
+      "⚠️ Ya tienes una cita a esa hora."
+
+    );
+
+    return;
+
+  }
+
+  const nuevaCita = {
+
+    fecha:fecha,
+
+    hora:hora,
+
+    nombre:nombre,
+
+    telefono:telefono,
+
+    servicio:servicio,
+
+    estado:estado
+
+  };
+
+  if(
+
+    citaEditando !== null
+
+  ){
+
+    citas[citaEditando] =
+
+      nuevaCita;
+
+    citaEditando =
+
+      null;
+
+    document
+
+      .getElementById(
+
+        "guardarCitaBtn"
+
+      )
+
+      .innerHTML =
+
+      "➕ Guardar cita";
+
+  }else{
+
+    citas.push(
+
+      nuevaCita
+
+    );
+
+  }
+
+  ordenarCitas();
+
+  localStorage.setItem(
+
+    "giovanniCitas",
+
+    JSON.stringify(citas)
+
+  );
+
+  limpiarCitaForm();
+
+  mostrarCitas();
+
+}
+
+/* ORDENAR */
+
+function ordenarCitas(){
+
+  citas.sort(
+
+    (a,b)=>{
+
+      if(
+
+        a.fecha !== b.fecha
+
+      ){
+
+        return a.fecha.localeCompare(
+
+          b.fecha
+
+        );
+
+      }
+
+      return a.hora.localeCompare(
+
+        b.hora
+
+      );
+
+    }
+
+  );
+
+}
+
+/* MOSTRAR CITAS */
+
+function mostrarCitas(){
+
+  const fecha =
+
+    document
+
+      .getElementById("agendaFecha")
+
+      .value;
+
+  const lista =
+
+    document.getElementById(
+
+      "listaCitas"
+
+    );
+
+  const citasDia =
+
+    citas
+
+      .map(
+
+        (cita,index)=>({
+
+          ...cita,
+
+          index:index
+
+        })
+
+      )
+
+      .filter(
+
+        cita =>
+
+          cita.fecha === fecha
+
+      );
+
+  document
+
+    .getElementById(
+
+      "contadorCitas"
+
+    )
+
+    .textContent =
+
+    citasDia.length;
+
+  lista.innerHTML = "";
+
+  if(
+
+    citasDia.length === 0
+
+  ){
+
+    lista.innerHTML = `
+
+      <div class="sin-citas">
+
+        🟢 No tienes citas
+
+        para este día.
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+  citasDia.forEach(
+
+    cita=>{
+
+      const div =
+
+        document.createElement("div");
+
+      div.className =
+
+        "cita";
+
+      const claseEstado =
+
+        cita.estado === "Confirmada"
+
+        ? "confirmada"
+
+        : "pendiente";
+
+      div.innerHTML = `
+
+        <div class="cita-top">
+
+          <h4>
+
+            🕐
+
+            ${escapeHTML(cita.hora)}
+
+            —
+
+            ${escapeHTML(cita.nombre)}
+
+          </h4>
+
+          <span class="${claseEstado}">
+
+            ${
+
+              cita.estado === "Confirmada"
+
+              ? "✅ Confirmada"
+
+              : "⏳ Pendiente"
+
+            }
+
+          </span>
+
+        </div>
+
+        <p>
+
+          ✂️
+
+          ${escapeHTML(cita.servicio)}
+
+        </p>
+
+        <p>
+
+          📱
+
+          ${
+
+            escapeHTML(
+
+              cita.telefono ||
+
+              "Sin teléfono"
+
+            )
+
+          }
+
+        </p>
+
+        <div class="cita-buttons">
+
+          <button
+
+            class="editar"
+
+            onclick="editarCita(${cita.index})"
+
+          >
+
+            ✏️ Editar
+
+          </button>
+
+          <button
+
+            class="eliminar"
+
+            onclick="eliminarCita(${cita.index})"
+
+          >
+
+            🗑️ Eliminar
+
+          </button>
+
+        </div>
+
+      `;
+
+      lista.appendChild(div);
+
+    }
+
+  );
+
+}
+
+/* EDITAR */
+
+function editarCita(index){
+
+  const cita =
+
+    citas[index];
+
+  document
+
+    .getElementById("agendaFecha")
+
+    .value =
+
+    cita.fecha;
+
+  document
+
+    .getElementById("citaHora")
+
+    .value =
+
+    cita.hora;
+
+  document
+
+    .getElementById("citaNombre")
+
+    .value =
+
+    cita.nombre;
+
+  document
+
+    .getElementById("citaTelefono")
+
+    .value =
+
+    cita.telefono;
+
+  document
+
+    .getElementById("citaServicio")
+
+    .value =
+
+    cita.servicio;
+
+  document
+
+    .getElementById("citaEstado")
+
+    .value =
+
+    cita.estado;
+
+  citaEditando =
+
+    index;
+
+  document
+
+    .getElementById(
+
+      "guardarCitaBtn"
+
+    )
+
+    .innerHTML =
+
+    "💾 Guardar cambios";
+
+  document
+
+    .getElementById("agenda")
+
+    .scrollIntoView({
+
+      behavior:"smooth"
+
+    });
+
+}
+
+/* ELIMINAR */
+
+function eliminarCita(index){
+
+  const confirmar =
+
+    confirm(
+
+      "¿Seguro que quieres eliminar esta cita?"
+
+    );
+
+  if(!confirmar){
+
+    return;
+
+  }
+
+  citas.splice(
+
+    index,
+
+    1
+
+  );
+
+  localStorage.setItem(
+
+    "giovanniCitas",
+
+    JSON.stringify(citas)
+
+  );
+
+  mostrarCitas();
+
+}
+
+/* LIMPIAR */
+
+function limpiarCitaForm(){
+
+  document
+
+    .getElementById("citaHora")
+
+    .value = "";
+
+  document
+
+    .getElementById("citaNombre")
+
+    .value = "";
+
+  document
+
+    .getElementById("citaTelefono")
+
+    .value = "";
+
+  document
+
+    .getElementById("citaServicio")
+
+    .value =
+
+    "Corte";
+
+  document
+
+    .getElementById("citaEstado")
+
+    .value =
+
+    "Confirmada";
+
+}
+
+/* =========================
+
+   INICIAR
+
+========================= */
+
+document.addEventListener(
+
+  "DOMContentLoaded",
+
+  function(){
+
+    mostrarOpiniones();
+
+    const fechaCliente =
+
+      document.getElementById(
+
+        "clienteFecha"
+
+      );
+
+    if(fechaCliente){
+
+      fechaCliente.min =
+
+        obtenerFechaHoy();
+
+    }
+
+    const fechaAgenda =
+
+      document.getElementById(
+
+        "agendaFecha"
+
+      );
+
+    if(fechaAgenda){
+
+      fechaAgenda.value =
+
+        obtenerFechaHoy();
+
+    }
+
+  }
+
+);
 
 </script>
 
